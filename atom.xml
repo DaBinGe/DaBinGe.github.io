@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[大彬]]></title>
-  <subtitle><![CDATA[iOS开发，致力于移动互联]]></subtitle>
+  <subtitle><![CDATA[做什么都一样，用心去做都可以做好。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-24T02:11:01.000Z</updated>
+  <updated>2016-02-24T06:24:44.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://yoursite.com/2016/02/04/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99%E6%80%BB%E6%8B%AC/"/>
     <id>http://yoursite.com/2016/02/04/技术博客编写总括/</id>
     <published>2016-02-04T02:10:10.000Z</published>
-    <updated>2016-02-24T02:11:01.000Z</updated>
-    <content type="html"><![CDATA[<p><strong>编写本博客环境:Mac OS 10.11.3,Mou 0.8.7</strong></p>
+    <updated>2016-02-24T06:24:44.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>编写本博客环境:    Mac OS 10.11.3,      Mou 0.8.7</strong></p>
 <p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a></p>
 <h1 id="1-__u524D_u8A00"><a href="#1-__u524D_u8A00" class="headerlink" title="1.    前言"></a>1.    前言</h1><p>本文主要介绍技术博客从开始到完成编写第一篇技术博客—-也就是此博客，的原因、所要做的事和学的知识。</p>
 <h1 id="2-__u5C0F_u7F16_u4E3A_u4F55_u8981_u5199_u6280_u672F_u535A_u5BA2"><a href="#2-__u5C0F_u7F16_u4E3A_u4F55_u8981_u5199_u6280_u672F_u535A_u5BA2" class="headerlink" title="2.    小编为何要写技术博客"></a>2.    小编为何要写技术博客</h1><h2 id="2-1__u548C_u4F17_u795E_u4E00_u6837_uFF0C_u8981_u505A_u4E2A_u6709_u903C_u683C_u7684_u7A0B_u5E8F_u733F"><a href="#2-1__u548C_u4F17_u795E_u4E00_u6837_uFF0C_u8981_u505A_u4E2A_u6709_u903C_u683C_u7684_u7A0B_u5E8F_u733F" class="headerlink" title="2.1    和众神一样，要做个有逼格的程序猿"></a>2.1    和众神一样，要做个有逼格的程序猿</h2><h2 id="2-2__u8BB0_u5F55_u5404_u4E2A_u5C0F_u6A21_u5757_u7684_u77E5_u8BC6_u3002"><a href="#2-2__u8BB0_u5F55_u5404_u4E2A_u5C0F_u6A21_u5757_u7684_u77E5_u8BC6_u3002" class="headerlink" title="2.2    记录各个小模块的知识。"></a>2.2    记录各个小模块的知识。</h2><pre><code>小编从入门开始就有记录和总结知识点的习惯，一直是写到有道云笔记里。小编的表哥是做C++开发的，
@@ -54,8 +54,8 @@
 <hr>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p><strong>编写本博客环境:Mac OS 10.11.3,Mou 0.8.7</strong></p>
-<p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大]]>
+    <![CDATA[<p><strong>编写本博客环境:    Mac OS 10.11.3,      Mou 0.8.7</strong></p>
+<p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="e]]>
     </summary>
     
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
