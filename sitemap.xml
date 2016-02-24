@@ -3,7 +3,12 @@
   
   <url>
     <loc>http://yoursite.com/%E5%85%B3%E4%BA%8E/index.html</loc>
-    <lastmod>2016-02-05T10:05:08.000Z</lastmod>
+    <lastmod>2016-02-24T03:36:36.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/02/04/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99%E6%80%BB%E6%8B%AC/</loc>
+    <lastmod>2016-02-24T02:11:01.000Z</lastmod>
   </url>
   
   <url>
@@ -14,11 +19,6 @@
   <url>
     <loc>http://yoursite.com/about/index.html</loc>
     <lastmod>2016-02-05T07:38:33.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/02/04/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99%E6%80%BB%E6%8B%AC/</loc>
-    <lastmod>2016-02-05T06:45:24.000Z</lastmod>
   </url>
   
   <url>
