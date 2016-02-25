@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/02/25/Mac%E4%B8%8BHexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2016-02-25T10:05:09.000Z</lastmod>
+    <loc>http://yoursite.com/2016/02/25/hello-world/</loc>
+    <lastmod>2016-02-25T10:13:48.000Z</lastmod>
     <data>
         <display>
-        <title>Mac下Hexo环境搭建</title>
-        <pubTime>2016-02-25T08:15:11.000Z</pubTime>
+        <title>Hello World</title>
+        <pubTime>2016-02-25T10:13:48.000Z</pubTime>
         
          
            
@@ -19,13 +19,15 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/02/25/hello-world/</loc>
-    <lastmod>2016-02-25T08:22:08.000Z</lastmod>
+    <loc>http://yoursite.com/2016/02/25/Mac%E4%B8%8BHexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2016-02-25T10:13:34.000Z</lastmod>
     <data>
         <display>
-        <title>Hello World</title>
-        <pubTime>2016-02-25T08:22:08.000Z</pubTime>
+        <title>Mac下Hexo环境搭建</title>
+        <pubTime>2016-02-25T08:15:11.000Z</pubTime>
         
+        <tag>Hexo</tag>
+         
          
            
         </display>

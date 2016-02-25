@@ -4,7 +4,7 @@
   <subtitle><![CDATA[做什么都一样，用心去做都可以做好。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-25T08:22:08.000Z</updated>
+  <updated>2016-02-25T10:13:48.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,11 +18,11 @@
     <title><![CDATA[Hello World]]></title>
     <link href="http://yoursite.com/2016/02/25/hello-world/"/>
     <id>http://yoursite.com/2016/02/25/hello-world/</id>
-    <published>2016-02-25T08:22:08.000Z</published>
-    <updated>2016-02-25T08:22:08.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="u5982_u679C_uFF0C_u4F60_u62B1_u6028_u751F_u6D3B_u8FD9_u4E48_u8270_u8F9B_uFF01_u90A3_u4E48_uFF0C_u51E0_u5341_u5E74_u524D_u7684_u90A3_u573A_u6E38_u6CF3_u6BD4_u8D5B_uFF0C_u4F60_u5C31_u4E0D_u8BE5_u62FF_u7B2C_u4E00_uFF01"><a href="#u5982_u679C_uFF0C_u4F60_u62B1_u6028_u751F_u6D3B_u8FD9_u4E48_u8270_u8F9B_uFF01_u90A3_u4E48_uFF0C_u51E0_u5341_u5E74_u524D_u7684_u90A3_u573A_u6E38_u6CF3_u6BD4_u8D5B_uFF0C_u4F60_u5C31_u4E0D_u8BE5_u62FF_u7B2C_u4E00_uFF01" class="headerlink" title="如果，你抱怨生活这么艰辛！那么，几十年前的那场游泳比赛，你就不该拿第一！"></a>如果，你抱怨生活这么艰辛！那么，几十年前的那场游泳比赛，你就不该拿第一！</h2>]]></content>
+    <published>2016-02-25T10:13:48.000Z</published>
+    <updated>2016-02-25T10:13:48.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="u5982_u679C_uFF0C_u4F60_u62B1_u6028_u73B0_u5728_u7684_u751F_u6D3B_u8FD9_u4E48_u8270_u8F9B_uFF01_u90A3_u4E48_uFF0C_u51E0_u5341_u5E74_u524D_u7684_u90A3_u573A_u6E38_u6CF3_u6BD4_u8D5B_uFF0C_u4F60_u5C31_u4E0D_u8BE5_u62FF_u7B2C_u4E00_uFF01"><a href="#u5982_u679C_uFF0C_u4F60_u62B1_u6028_u73B0_u5728_u7684_u751F_u6D3B_u8FD9_u4E48_u8270_u8F9B_uFF01_u90A3_u4E48_uFF0C_u51E0_u5341_u5E74_u524D_u7684_u90A3_u573A_u6E38_u6CF3_u6BD4_u8D5B_uFF0C_u4F60_u5C31_u4E0D_u8BE5_u62FF_u7B2C_u4E00_uFF01" class="headerlink" title="如果，你抱怨现在的生活这么艰辛！那么，几十年前的那场游泳比赛，你就不该拿第一！"></a>如果，你抱怨现在的生活这么艰辛！那么，几十年前的那场游泳比赛，你就不该拿第一！</h2>]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="u5982_u679C_uFF0C_u4F60_u62B1_u6028_u751F_u6D3B_u8FD9_u4E48_u8270_u8F9B_uFF01_u90A3_u4E48_uFF0C_u51E0_u5341_u5E74_u524D_u7684_u90A3_]]>
+    <![CDATA[<h2 id="u5982_u679C_uFF0C_u4F60_u62B1_u6028_u73B0_u5728_u7684_u751F_u6D3B_u8FD9_u4E48_u8270_u8F9B_uFF01_u90A3_u4E48_uFF0C_u51E0_u5341_u5E74_]]>
     </summary>
     
   </entry>
@@ -32,7 +32,7 @@
     <link href="http://yoursite.com/2016/02/25/Mac%E4%B8%8BHexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
     <id>http://yoursite.com/2016/02/25/Mac下Hexo环境搭建/</id>
     <published>2016-02-25T08:15:11.000Z</published>
-    <updated>2016-02-25T10:05:09.000Z</updated>
+    <updated>2016-02-25T10:13:34.000Z</updated>
     <content type="html"><![CDATA[<p><strong>编写本博客环境:    Mac OS 10.11.3,      Mou 0.8.7</strong></p>
 <p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a></p>
 <h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>本博客的内容基本都是终端操作，没有使用过终端或者较少使用的小伙伴可直接复制相关<br>命令。有需要的小伙伴可参考<a href="http://www.cnblogs.com/hjzhang/archive/2009/12/04/2043586.html/" target="_blank" rel="external">Unix终端常用命令</a>,<a href="http://itindex.net/detail/47206-mac-%E7%BB%88%E7%AB%AF-%E5%91%BD%E4%BB%A4" target="_blank" rel="external">mac终端命令大全介绍</a>。</p>
@@ -61,7 +61,7 @@ $ sudo npm install hexo-server —save
 
 9.    启动服务,或使用hero s，按Ctrl+C停止运行
 $ hexo server
-</code></pre><p>10.打开链接<a href="http://0.0.0.0:4000" target="_blank" rel="external">http://0.0.0.0:4000</a>,查看生成的博客。如果<br>显示cannot get/，继续安装下面几个文件。</p>
+</code></pre><p>10.打开链接<a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a>,查看生成的博客。如果<br>显示cannot get/，继续安装下面几个文件。</p>
 <pre><code>11.1    直接安装缺少的几个包
 $ npm install
 11.2    继续安装指定的几个包
@@ -119,6 +119,8 @@ $ hexo s -g
     <![CDATA[<p><strong>编写本博客环境:    Mac OS 10.11.3,      Mou 0.8.7</strong></p>
 <p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="e]]>
     </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
   </entry>
   
