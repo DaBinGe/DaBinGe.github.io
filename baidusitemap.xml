@@ -3,6 +3,37 @@
 
 
     
+  <url>
+    <loc>http://yoursite.com/2016/02/25/Mac%E4%B8%8BHexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2016-02-25T10:05:09.000Z</lastmod>
+    <data>
+        <display>
+        <title>Mac下Hexo环境搭建</title>
+        <pubTime>2016-02-25T08:15:11.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/02/25/hello-world/</loc>
+    <lastmod>2016-02-25T08:22:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-02-25T08:22:08.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
     
   <url>
     <loc>http://yoursite.com/2016/02/04/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99%E6%80%BB%E6%8B%AC/</loc>
@@ -24,20 +55,4 @@
     
     
     
-    
-    
-  <url>
-    <loc>http://yoursite.com/2016/02/02/hello-world/</loc>
-    <lastmod>2016-02-02T02:16:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2016-02-02T02:16:01.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
 </urlset>
