@@ -4,7 +4,7 @@
   <subtitle><![CDATA[做什么都一样，用心去做都可以做好。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-26T03:08:33.000Z</updated>
+  <updated>2016-02-26T04:24:35.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,11 +19,33 @@
     <link href="http://yoursite.com/2016/02/26/%E5%85%B3%E8%81%94Github%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2016/02/26/关联Github博客/</id>
     <published>2016-02-26T03:08:33.000Z</published>
-    <updated>2016-02-26T03:08:33.000Z</updated>
-    <content type="html"></content>
+    <updated>2016-02-26T04:24:35.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>编写本博客环境:    Mac OS 10.11.3,      Mou 0.8.7</strong></p>
+<p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a></p>
+<h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>上一编博客已经介绍了<a href="http://dabinge.github.io/2016/02/25/Mac%E4%B8%8BHexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" target="_blank" rel="external">Mac下Hexo环境搭建</a>，相信大家已经可以看到自己的博客了。<br>但是博客地址是<a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a>，属于本地地址，还要开启服务“hexo server”<br>才能看。而现在有很多人把自己的博客关联到网上的一些平台，<a href="http://blog.sina.com.cn/" target="_blank" rel="external">比如新浪</a>，<a href="http://www.csdn.net/" target="_blank" rel="external">CSDN</a>，<br><a href="https://github.com" target="_blank" rel="external">Github</a>和<a href="http://www.cnblogs.com/" target="_blank" rel="external">博客园</a>等。小编选择的是国际平台的Github，因为Github人气旺，上面<br>的资源比较优质，还考虑到后面要把自己写得好的源码上传到Github，所以选择它。  </p>
+<h1 id="u521B_u5EFAGithub_u535A_u5BA2"><a href="#u521B_u5EFAGithub_u535A_u5BA2" class="headerlink" title="创建Github博客"></a>创建Github博客</h1><h2 id="u6CE8_u518CGithub_u5E10_u53F7"><a href="#u6CE8_u518CGithub_u5E10_u53F7" class="headerlink" title="注册Github帐号"></a>注册Github帐号</h2><p>没有Github帐号的小伙伴需要到<a href="https://github.com" target="_blank" rel="external">Github官网</a>上注册一个帐号。</p>
+<h2 id="u521B_u5EFA_u4ED3_u5E93"><a href="#u521B_u5EFA_u4ED3_u5E93" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>登录Github后，到个人主页创建一个仓库，找不到入口的小伙伴可参考<a href="http://jingyan.baidu.com/article/b907e627d3c1d546e7891ceb.html" target="_blank" rel="external">Github创建项目仓库百度经验</a>。</p>
+<h2 id="u521B_u5EFAGithub_u535A_u5BA2-1"><a href="#u521B_u5EFAGithub_u535A_u5BA2-1" class="headerlink" title="创建Github博客"></a>创建Github博客</h2><p>Settings-&gt;Update your site-&gt;Auto matic page generator，然后选择主题发布。<br>后面Github博客关联到Hexo的博客后，将使用Hexo的主题，所以在这里可以不用纠结太久。<br>有需要的小伙伴可参考<a href="http://jingyan.baidu.com/article/ed2a5d1f3732cb09f7be1745.html" target="_blank" rel="external">用Github pages创建自己的个人博客</a>。</p>
+<h2 id="u5173_u8054Github_u535A_u5BA2_u548CHexo_u535A_u5BA2"><a href="#u5173_u8054Github_u535A_u5BA2_u548CHexo_u535A_u5BA2" class="headerlink" title="关联Github博客和Hexo博客"></a>关联Github博客和Hexo博客</h2><h3 id="u6B65_u9AA4"><a href="#u6B65_u9AA4" class="headerlink" title="步骤"></a>步骤</h3><p>让仓库地址 <a href="http://Github用户.github.io" target="_blank" rel="external">http://Github用户.github.io</a> 博客显示<a href="http://0.0.0.0:4000的博客。" target="_blank" rel="external">http://0.0.0.0:4000的博客。</a><br>到生成的博客主目录下，编辑_config.yml文件，拉到最下面，找到代码 #Deployment，<br>并修改如下：</p>
+<pre><code># Deployment
+## Docs: http://hexo.io/docs/deployment.html
+deploy:
+type: git
+repository : https://github.com/Github用户（即使有大写也全要是小写）/Github用户（即使有大写也全要是小写）.github.io.git
+branch : master
+</code></pre><p>类型type后面在hexo 3.0之后要用git，而不是gitbub。</p>
+<h3 id="u7EC8_u7AEF_u547D_u4EE4"><a href="#u7EC8_u7AEF_u547D_u4EE4" class="headerlink" title="终端命令"></a>终端命令</h3><pre><code>$ cd ~/Documents/hexo
+$ vim _config.yml
+</code></pre><p>输入小写字母i进入编辑状态，修改#Deployment下的代码。<br>改好#Deployment后，在英文键盘输入模式下，按Esc，输入冒号和wq保存并退出，如:wq</p>
+<pre><code>$ hexo d -g
+</code></pre><p>发布后到Github博客，也是仓库地址查看效果。<a href="http://Github用户（即使有大写也全要是小写）.github.io/" target="_blank" rel="external">http://Github用户（即使有大写也全要是小写）.github.io/</a></p>
+]]></content>
     <summary type="html">
-    
+    <![CDATA[<p><strong>编写本博客环境:    Mac OS 10.11.3,      Mou 0.8.7</strong></p>
+<p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="e]]>
     </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
   </entry>
   
