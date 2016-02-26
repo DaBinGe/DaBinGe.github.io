@@ -4,7 +4,7 @@
   <subtitle><![CDATA[做什么都一样，用心去做都可以做好。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-26T04:24:35.000Z</updated>
+  <updated>2016-02-26T09:44:51.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,11 +15,83 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[编写博客]]></title>
+    <link href="http://yoursite.com/2016/02/26/%E7%BC%96%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2016/02/26/编写博客/</id>
+    <published>2016-02-26T07:30:57.000Z</published>
+    <updated>2016-02-26T09:44:51.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>编写本博客环境:    Mac OS 10.11.3,      Mou 0.8.7</strong></p>
+<p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a></p>
+<h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>  新手编写博客，要先选择和安装好博客编写软件，还要学习编写相关的语法。<br>  软件主要介绍Markdown Editors，下面会列出给大家参考。<br>  平时浏览网页，相信大家也见过网页上有标题、链接、高亮、图片、表格和文本块等。要实现这些效果，<br>显然也要遵循一定的规则或者说是语法。而编写博客的语法可以用HTML，也可以用Markdown，或者<br>两种同时使用。</p>
+<h1 id="Markdown_Editors"><a href="#Markdown_Editors" class="headerlink" title="Markdown Editors"></a>Markdown Editors</h1><h2 id="Mac_Markdown_u7F16_u8F91_u5668"><a href="#Mac_Markdown_u7F16_u8F91_u5668" class="headerlink" title="Mac Markdown编辑器"></a>Mac Markdown编辑器</h2><p>StackEdit、MDEditor、简书、马克飞象、Marxico是在线编辑器，其它是客户端<br>FarBox、Cmd Markdown、小书匠、Sublime Text和Atom 支持多平台</p>
+<h3 id="Mac_u6536_u8D39_u8F6F_u4EF6"><a href="#Mac_u6536_u8D39_u8F6F_u4EF6" class="headerlink" title="Mac收费软件"></a>Mac收费软件</h3><ul>
+<li><a href="https://maxiang.io/" target="_blank" rel="external">马克飞象 Maxiang</a>，10天试用</li>
+<li><a href="https://bywordapp.com/" target="_blank" rel="external">Byword</a>，移动端和电脑端都可以使用</li>
+<li><a href="https://ia.net/writer/ios" target="_blank" rel="external">iA Writer</a>，移动端和电脑端都可以使用</li>
+<li><a href="http://www.ulyssesapp.com/" target="_blank" rel="external">Ulysses</a>，可用于Mac和iPad</li>
+<li><a href="https://71squared.com/focused" target="_blank" rel="external">Typed</a></li>
+</ul>
+<h3 id="Mac_u514D_u8D39_u8F6F_u4EF6"><a href="#Mac_u514D_u8D39_u8F6F_u4EF6" class="headerlink" title="Mac免费软件"></a>Mac免费软件</h3><p>小编查找的时候，遇到要注册帐号的已经列出</p>
+<ul>
+<li><a href="https://stackedit.io/editor" target="_blank" rel="external">StackEdit</a></li>
+<li><a href="http://dillinger.io/" target="_blank" rel="external">Dillinger</a></li>
+<li><a href="http://www.marxi.co/" target="_blank" rel="external">Marxico</a>，要注册帐号</li>
+<li><a href="https://coding.net/" target="_blank" rel="external">Coding</a>，要注册帐号</li>
+<li><a href="http://www.jianshu.com/" target="_blank" rel="external">简书</a>，要注册帐号</li>
+<li><a href="http://mahua.jser.me/" target="_blank" rel="external">MaHua</a></li>
+<li><a href="http://soft.xiaoshujiang.com/" target="_blank" rel="external">小书匠</a></li>
+<li><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Cmd MarkDown</a>，要注册帐号，部分语法只适合用在它的平台</li>
+<li><a href="https://www.farbox.com/" target="_blank" rel="external">FarBox</a></li>
+<li><a href="http://www.sublimetext.com/" target="_blank" rel="external">Sublime Text</a></li>
+<li><a href="https://atom.io/" target="_blank" rel="external">Atom</a></li>
+<li><a href="http://25.io/mou/" target="_blank" rel="external">Mou</a>，小编使用的就是它</li>
+<li><a href="http://www.typora.io/" target="_blank" rel="external">Typora</a></li>
+<li><a href="http://macdown.uranusjr.com/" target="_blank" rel="external">MacDown</a></li>
+<li><a href="http://pad.haroopress.com/user.html" target="_blank" rel="external">Haroopad</a></li>
+<li><a href="http://jbt.github.io/markdown-editor/" target="_blank" rel="external">Markdown Editor</a>，很官方的名字，小伙伴们可以试用看看</li>
+<li><a href="https://github.com/dragondjf/QMarkdowner" target="_blank" rel="external">QMarkDowner</a></li>
+</ul>
+<h3 id="Windows_u76F8_u5173_u8F6F_u4EF6"><a href="#Windows_u76F8_u5173_u8F6F_u4EF6" class="headerlink" title="Windows相关软件"></a>Windows相关软件</h3><ul>
+<li><a href="http://www.markdownpad.com/" target="_blank" rel="external">MarkdownPad</a></li>
+<li><a href="http://git.oschina.net/elerao/Smark" target="_blank" rel="external">Smark</a></li>
+<li><a href="http://www.mdcharm.com/" target="_blank" rel="external">MdCharm</a></li>
+<li><a href="http://www.appinn.com/miu-markdown-editor/" target="_blank" rel="external">Miu</a></li>
+<li><a href="https://github.com/retext-project/retext" target="_blank" rel="external">ReText</a></li>
+<li><a href="http://markdownpad.com/" target="_blank" rel="external">MarkdownPad</a></li>
+<li><a href="http://epiceditor.com" target="_blank" rel="external">EpicEditor</a></li>
+<li><a href="http://cloose.github.io/CuteMarkEd/#" target="_blank" rel="external">CuteMarkEd</a></li>
+</ul>
+<h2 id="u7F16_u8BD1_u5668_u8BC4_u4EF7_u53C2_u8003_u94FE_u63A5"><a href="#u7F16_u8BD1_u5668_u8BC4_u4EF7_u53C2_u8003_u94FE_u63A5" class="headerlink" title="编译器评价参考链接"></a>编译器评价参考链接</h2><ul>
+<li><a href="http://www.williamlong.info/archives/4319.html" target="_blank" rel="external">好用的markdown编辑器</a></li>
+<li><a href="http://www.oschina.net/search?q=markdown&amp;scope=project&amp;fromerr=SBmNEkbX" target="_blank" rel="external">开源中国的markdown软件锦集</a></li>
+<li><a href="http://www.zhihu.com/question/20004911" target="_blank" rel="external">Mac上有哪些对Markdown预览支持比较好用的应用</a></li>
+<li><a href="http://www.zhihu.com/question/22700184" target="_blank" rel="external">Mac上最好的markdown文本编辑器是什么</a></li>
+</ul>
+<h1 id="Markdown_u8BED_u6CD5"><a href="#Markdown_u8BED_u6CD5" class="headerlink" title="Markdown语法"></a>Markdown语法</h1><p>Markdown语法并不多，总共10来条，很容易掌握和上手，编写也能马上看到效果。<br>大家下载了Markdown编辑器在软件帮助也能找到Markdown语法说明，参考范例马上<br>着手写吧。<br>下面是语法说明参考文档：</p>
+<ul>
+<li><a href="https://www.wikimilk.org/markdown-guide/#help" target="_blank" rel="external">Markdown：指南</a></li>
+<li><a href="https://www.wikimilk.org/markdown-syntax/" target="_blank" rel="external">Markdown：语法</a></li>
+<li><a href="http://baike.baidu.com/link?url=VmJ2H4-nQ7QwGY9zpA6YEQQfxTIZT1IB59_td1cbvL0sT3gQEDRF1XRWfygtRddOy7XUXqFo91KT3BNv_bHHeq" target="_blank" rel="external">百度百科</a></li>
+<li><a href="http://wowubuntu.com/markdown/#philosophy" target="_blank" rel="external">Markdown说明中文版</a></li>
+<li><a href="https://gitcafe.com/riku/Markdown-Syntax-CN/raw/master/syntax.md" target="_blank" rel="external">Markdown说明中文版源码</a></li>
+<li><a href="https://www.zybuluo.com/mdeditor?url=https%3A%2F%2Fwww.zybuluo.com%2Fstatic%2Feditor%2Fmd-help.markdown" target="_blank" rel="external">Cmd markdown语法手册</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong>编写本博客环境:    Mac OS 10.11.3,      Mou 0.8.7</strong></p>
+<p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="e]]>
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[关联Github博客]]></title>
     <link href="http://yoursite.com/2016/02/26/%E5%85%B3%E8%81%94Github%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2016/02/26/关联Github博客/</id>
     <published>2016-02-26T03:08:33.000Z</published>
-    <updated>2016-02-26T04:24:35.000Z</updated>
+    <updated>2016-02-26T07:33:35.000Z</updated>
     <content type="html"><![CDATA[<p><strong>编写本博客环境:    Mac OS 10.11.3,      Mou 0.8.7</strong></p>
 <p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a></p>
 <h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>上一编博客已经介绍了<a href="http://dabinge.github.io/2016/02/25/Mac%E4%B8%8BHexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" target="_blank" rel="external">Mac下Hexo环境搭建</a>，相信大家已经可以看到自己的博客了。<br>但是博客地址是<a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a>，属于本地地址，还要开启服务“hexo server”<br>才能看。而现在有很多人把自己的博客关联到网上的一些平台，<a href="http://blog.sina.com.cn/" target="_blank" rel="external">比如新浪</a>，<a href="http://www.csdn.net/" target="_blank" rel="external">CSDN</a>，<br><a href="https://github.com" target="_blank" rel="external">Github</a>和<a href="http://www.cnblogs.com/" target="_blank" rel="external">博客园</a>等。小编选择的是国际平台的Github，因为Github人气旺，上面<br>的资源比较优质，还考虑到后面要把自己写得好的源码上传到Github，所以选择它。  </p>
@@ -38,7 +110,8 @@ branch : master
 $ vim _config.yml
 </code></pre><p>输入小写字母i进入编辑状态，修改#Deployment下的代码。<br>改好#Deployment后，在英文键盘输入模式下，按Esc，输入冒号和wq保存并退出，如:wq</p>
 <pre><code>$ hexo d -g
-</code></pre><p>发布后到Github博客，也是仓库地址查看效果。<a href="http://Github用户（即使有大写也全要是小写）.github.io/" target="_blank" rel="external">http://Github用户（即使有大写也全要是小写）.github.io/</a></p>
+</code></pre><p>发布后到Github博客，也是仓库地址查看效果。<a href="http://Github用户（即使有大写也全要是小写）.github.io/，小编的是http://dabinge.github.io。" target="_blank" rel="external">http://Github用户（即使有大写也全要是小写）.github.io/，小编的是http://dabinge.github.io。</a></p>
+<p>至此，关联Github和hexo博客已经完成，下一篇介绍的是<a href="/">编写博客</a>。</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p><strong>编写本博客环境:    Mac OS 10.11.3,      Mou 0.8.7</strong></p>

@@ -4,8 +4,25 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/02/26/%E7%BC%96%E5%86%99%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2016-02-26T09:44:51.000Z</lastmod>
+    <data>
+        <display>
+        <title>编写博客</title>
+        <pubTime>2016-02-26T07:30:57.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/02/26/%E5%85%B3%E8%81%94Github%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2016-02-26T04:24:35.000Z</lastmod>
+    <lastmod>2016-02-26T07:33:35.000Z</lastmod>
     <data>
         <display>
         <title>关联Github博客</title>
