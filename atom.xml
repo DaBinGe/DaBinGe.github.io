@@ -4,7 +4,7 @@
   <subtitle><![CDATA[做什么都一样，用心去做都可以做好。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-26T09:44:51.000Z</updated>
+  <updated>2016-02-26T10:03:00.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2016/02/26/%E7%BC%96%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2016/02/26/编写博客/</id>
     <published>2016-02-26T07:30:57.000Z</published>
-    <updated>2016-02-26T09:44:51.000Z</updated>
+    <updated>2016-02-26T10:03:00.000Z</updated>
     <content type="html"><![CDATA[<p><strong>编写本博客环境:    Mac OS 10.11.3,      Mou 0.8.7</strong></p>
 <p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a></p>
 <h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>  新手编写博客，要先选择和安装好博客编写软件，还要学习编写相关的语法。<br>  软件主要介绍Markdown Editors，下面会列出给大家参考。<br>  平时浏览网页，相信大家也见过网页上有标题、链接、高亮、图片、表格和文本块等。要实现这些效果，<br>显然也要遵循一定的规则或者说是语法。而编写博客的语法可以用HTML，也可以用Markdown，或者<br>两种同时使用。</p>
@@ -76,6 +76,22 @@
 <li><a href="https://gitcafe.com/riku/Markdown-Syntax-CN/raw/master/syntax.md" target="_blank" rel="external">Markdown说明中文版源码</a></li>
 <li><a href="https://www.zybuluo.com/mdeditor?url=https%3A%2F%2Fwww.zybuluo.com%2Fstatic%2Feditor%2Fmd-help.markdown" target="_blank" rel="external">Cmd markdown语法手册</a></li>
 </ul>
+<h1 id="u7F16_u5199_u6B65_u9AA4"><a href="#u7F16_u5199_u6B65_u9AA4" class="headerlink" title="编写步骤"></a>编写步骤</h1><ol>
+<li><p>博客主目录下，终端新建一编博客</p>
+<p>$ hexo new 博客名称</p>
+</li>
+<li><p>打开Finder，到博客主目录下的source-&gt;_posts下找到对应的“博客名称.md”文件</p>
+</li>
+<li>用安装好的Markdown编译器打开</li>
+<li>参考语法编写内容</li>
+<li>保存博客内容</li>
+<li><p>终端更新所有内容到网络，包括刚刚编写的博客</p>
+<p>$ hexo d -g</p>
+</li>
+<li><p>到博客（仓库）地址    查看效果，对不满意的更改再更新上去。</p>
+</li>
+</ol>
+<p>博客编写介绍到此结束。</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p><strong>编写本博客环境:    Mac OS 10.11.3,      Mou 0.8.7</strong></p>
@@ -91,14 +107,14 @@
     <link href="http://yoursite.com/2016/02/26/%E5%85%B3%E8%81%94Github%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2016/02/26/关联Github博客/</id>
     <published>2016-02-26T03:08:33.000Z</published>
-    <updated>2016-02-26T07:33:35.000Z</updated>
+    <updated>2016-02-26T10:01:45.000Z</updated>
     <content type="html"><![CDATA[<p><strong>编写本博客环境:    Mac OS 10.11.3,      Mou 0.8.7</strong></p>
 <p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a></p>
 <h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>上一编博客已经介绍了<a href="http://dabinge.github.io/2016/02/25/Mac%E4%B8%8BHexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" target="_blank" rel="external">Mac下Hexo环境搭建</a>，相信大家已经可以看到自己的博客了。<br>但是博客地址是<a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a>，属于本地地址，还要开启服务“hexo server”<br>才能看。而现在有很多人把自己的博客关联到网上的一些平台，<a href="http://blog.sina.com.cn/" target="_blank" rel="external">比如新浪</a>，<a href="http://www.csdn.net/" target="_blank" rel="external">CSDN</a>，<br><a href="https://github.com" target="_blank" rel="external">Github</a>和<a href="http://www.cnblogs.com/" target="_blank" rel="external">博客园</a>等。小编选择的是国际平台的Github，因为Github人气旺，上面<br>的资源比较优质，还考虑到后面要把自己写得好的源码上传到Github，所以选择它。  </p>
 <h1 id="u521B_u5EFAGithub_u535A_u5BA2"><a href="#u521B_u5EFAGithub_u535A_u5BA2" class="headerlink" title="创建Github博客"></a>创建Github博客</h1><h2 id="u6CE8_u518CGithub_u5E10_u53F7"><a href="#u6CE8_u518CGithub_u5E10_u53F7" class="headerlink" title="注册Github帐号"></a>注册Github帐号</h2><p>没有Github帐号的小伙伴需要到<a href="https://github.com" target="_blank" rel="external">Github官网</a>上注册一个帐号。</p>
 <h2 id="u521B_u5EFA_u4ED3_u5E93"><a href="#u521B_u5EFA_u4ED3_u5E93" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>登录Github后，到个人主页创建一个仓库，找不到入口的小伙伴可参考<a href="http://jingyan.baidu.com/article/b907e627d3c1d546e7891ceb.html" target="_blank" rel="external">Github创建项目仓库百度经验</a>。</p>
 <h2 id="u521B_u5EFAGithub_u535A_u5BA2-1"><a href="#u521B_u5EFAGithub_u535A_u5BA2-1" class="headerlink" title="创建Github博客"></a>创建Github博客</h2><p>Settings-&gt;Update your site-&gt;Auto matic page generator，然后选择主题发布。<br>后面Github博客关联到Hexo的博客后，将使用Hexo的主题，所以在这里可以不用纠结太久。<br>有需要的小伙伴可参考<a href="http://jingyan.baidu.com/article/ed2a5d1f3732cb09f7be1745.html" target="_blank" rel="external">用Github pages创建自己的个人博客</a>。</p>
-<h2 id="u5173_u8054Github_u535A_u5BA2_u548CHexo_u535A_u5BA2"><a href="#u5173_u8054Github_u535A_u5BA2_u548CHexo_u535A_u5BA2" class="headerlink" title="关联Github博客和Hexo博客"></a>关联Github博客和Hexo博客</h2><h3 id="u6B65_u9AA4"><a href="#u6B65_u9AA4" class="headerlink" title="步骤"></a>步骤</h3><p>让仓库地址 <a href="http://Github用户.github.io" target="_blank" rel="external">http://Github用户.github.io</a> 博客显示<a href="http://0.0.0.0:4000的博客。" target="_blank" rel="external">http://0.0.0.0:4000的博客。</a><br>到生成的博客主目录下，编辑_config.yml文件，拉到最下面，找到代码 #Deployment，<br>并修改如下：</p>
+<h1 id="u5173_u8054Github_u535A_u5BA2_u548CHexo_u535A_u5BA2"><a href="#u5173_u8054Github_u535A_u5BA2_u548CHexo_u535A_u5BA2" class="headerlink" title="关联Github博客和Hexo博客"></a>关联Github博客和Hexo博客</h1><h2 id="u6B65_u9AA4"><a href="#u6B65_u9AA4" class="headerlink" title="步骤"></a>步骤</h2><p>让仓库地址 <a href="http://Github用户.github.io" target="_blank" rel="external">http://Github用户.github.io</a> 博客显示<a href="http://0.0.0.0:4000的博客。" target="_blank" rel="external">http://0.0.0.0:4000的博客。</a><br>到生成的博客主目录下，编辑_config.yml文件，拉到最下面，找到代码 #Deployment，<br>并修改如下：</p>
 <pre><code># Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
@@ -106,12 +122,12 @@ type: git
 repository : https://github.com/Github用户（即使有大写也全要是小写）/Github用户（即使有大写也全要是小写）.github.io.git
 branch : master
 </code></pre><p>类型type后面在hexo 3.0之后要用git，而不是gitbub。</p>
-<h3 id="u7EC8_u7AEF_u547D_u4EE4"><a href="#u7EC8_u7AEF_u547D_u4EE4" class="headerlink" title="终端命令"></a>终端命令</h3><pre><code>$ cd ~/Documents/hexo
+<h2 id="u7EC8_u7AEF_u547D_u4EE4"><a href="#u7EC8_u7AEF_u547D_u4EE4" class="headerlink" title="终端命令"></a>终端命令</h2><pre><code>$ cd ~/Documents/hexo
 $ vim _config.yml
 </code></pre><p>输入小写字母i进入编辑状态，修改#Deployment下的代码。<br>改好#Deployment后，在英文键盘输入模式下，按Esc，输入冒号和wq保存并退出，如:wq</p>
 <pre><code>$ hexo d -g
 </code></pre><p>发布后到Github博客，也是仓库地址查看效果。<a href="http://Github用户（即使有大写也全要是小写）.github.io/，小编的是http://dabinge.github.io。" target="_blank" rel="external">http://Github用户（即使有大写也全要是小写）.github.io/，小编的是http://dabinge.github.io。</a></p>
-<p>至此，关联Github和hexo博客已经完成，下一篇介绍的是<a href="/">编写博客</a>。</p>
+<p>至此，关联Github和hexo博客已经完成，下一篇介绍的是<a href="http://dabinge.github.io/2016/02/26/%E7%BC%96%E5%86%99%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">编写博客</a>。</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p><strong>编写本博客环境:    Mac OS 10.11.3,      Mou 0.8.7</strong></p>
