@@ -4,12 +4,44 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/02/26/%E5%85%B3%E8%81%94Github%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2016-02-26T03:08:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>关联Github博客</title>
+        <pubTime>2016-02-26T03:08:33.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/02/25/Mac%E4%B8%8BHexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2016-02-26T02:47:30.000Z</lastmod>
+    <lastmod>2016-02-26T03:08:16.000Z</lastmod>
     <data>
         <display>
         <title>Mac下Hexo环境搭建</title>
         <pubTime>2016-02-25T08:15:11.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/02/04/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99%E6%80%BB%E6%8B%AC/</loc>
+    <lastmod>2016-02-26T03:02:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>技术博客编写总括</title>
+        <pubTime>2016-02-04T02:10:10.000Z</pubTime>
         
         <tag>Hexo</tag>
          
@@ -36,23 +68,6 @@
 
     
     
-    
-  <url>
-    <loc>http://yoursite.com/2016/02/04/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99%E6%80%BB%E6%8B%AC/</loc>
-    <lastmod>2016-02-24T06:24:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>技术博客编写总括</title>
-        <pubTime>2016-02-04T02:10:10.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
     
     
     

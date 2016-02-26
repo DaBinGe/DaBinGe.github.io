@@ -4,7 +4,7 @@
   <subtitle><![CDATA[做什么都一样，用心去做都可以做好。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-25T10:13:48.000Z</updated>
+  <updated>2016-02-26T03:08:33.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,19 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[关联Github博客]]></title>
+    <link href="http://yoursite.com/2016/02/26/%E5%85%B3%E8%81%94Github%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2016/02/26/关联Github博客/</id>
+    <published>2016-02-26T03:08:33.000Z</published>
+    <updated>2016-02-26T03:08:33.000Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Hello World]]></title>
@@ -32,7 +45,7 @@
     <link href="http://yoursite.com/2016/02/25/Mac%E4%B8%8BHexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
     <id>http://yoursite.com/2016/02/25/Mac下Hexo环境搭建/</id>
     <published>2016-02-25T08:15:11.000Z</published>
-    <updated>2016-02-26T02:47:30.000Z</updated>
+    <updated>2016-02-26T03:08:16.000Z</updated>
     <content type="html"><![CDATA[<p><strong>编写本博客环境:    Mac OS 10.11.3,      Mou 0.8.7</strong></p>
 <p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a></p>
 <h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>本博客的内容基本都是终端操作，没有使用过终端或者较少使用的小伙伴可直接复制相关<br>命令。有需要的小伙伴可参考<a href="http://www.cnblogs.com/hjzhang/archive/2009/12/04/2043586.html/" target="_blank" rel="external">Unix终端常用命令</a>，<a href="http://itindex.net/detail/47206-mac-%E7%BB%88%E7%AB%AF-%E5%91%BD%E4%BB%A4" target="_blank" rel="external">mac终端命令大全介绍</a>。</p>
@@ -112,7 +125,7 @@ $ hexo s -g
 549  hexo server
 550  npm install
 551  hexo s -g
-</code></pre><p>至此，Hexo博客环境已搭建完成，后面介绍的是博客的编写和更新。</p>
+</code></pre><p>至此，Hexo博客环境已搭建完成，后面介绍的是关联Github博客。</p>
 <h1 id="u53C2_u8003_u94FE_u63A5"><a href="#u53C2_u8003_u94FE_u63A5" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js官网</a><br><a href="https://nodejs.org/en/download/" target="_blank" rel="external">Node.js下载（安装包含npm工具</a><br><a href="https://hexo.io/docs/index.html" target="_blank" rel="external">Hexo官方文档</a><br><a href="http://www.jianshu.com/p/465830080ea9" target="_blank" rel="external">搭建环境博客 1</a><br><a href="http://segmentfault.com/a/1190000000370778" target="_blank" rel="external">搭建环境博客 2</a><br><a href="http://www.zhihu.com/question/35964327" target="_blank" rel="external">打开链接出现Cannot GET/的解决方法</a></p>
 ]]></content>
     <summary type="html">
@@ -129,7 +142,7 @@ $ hexo s -g
     <link href="http://yoursite.com/2016/02/04/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99%E6%80%BB%E6%8B%AC/"/>
     <id>http://yoursite.com/2016/02/04/技术博客编写总括/</id>
     <published>2016-02-04T02:10:10.000Z</published>
-    <updated>2016-02-24T06:24:44.000Z</updated>
+    <updated>2016-02-26T03:02:23.000Z</updated>
     <content type="html"><![CDATA[<p><strong>编写本博客环境:    Mac OS 10.11.3,      Mou 0.8.7</strong></p>
 <p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a></p>
 <h1 id="1-__u524D_u8A00"><a href="#1-__u524D_u8A00" class="headerlink" title="1.    前言"></a>1.    前言</h1><p>本文主要介绍技术博客从开始到完成编写第一篇技术博客—-也就是此博客，的原因、所要做的事和学的知识。</p>
@@ -160,6 +173,7 @@ $ hexo s -g
 <h2 id="3-6__u5B89_u88C5_u535A_u5BA2_u7F16_u5199_u8F6F_u4EF6Markdown_Editor_u3002"><a href="#3-6__u5B89_u88C5_u535A_u5BA2_u7F16_u5199_u8F6F_u4EF6Markdown_Editor_u3002" class="headerlink" title="3.6    安装博客编写软件Markdown Editor。"></a>3.6    安装博客编写软件Markdown Editor。</h2><p>搜集相关软件，选出自己喜欢的类型来安装。有在线编辑和客户端编辑，小编安装了  客户端的<a href="http://25.io/mou/" target="_blank" rel="external">Mou</a>，<a href="http://soft.xiaoshujiang.com/" target="_blank" rel="external">小书匠</a>和<a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Cmd Markdown</a>。</p>
 <h2 id="3-7__u7F16_u5199_u535A_u5BA2_u6587_u7AE0_u3002"><a href="#3-7__u7F16_u5199_u535A_u5BA2_u6587_u7AE0_u3002" class="headerlink" title="3.7    编写博客文章。"></a>3.7    编写博客文章。</h2><p>边查看Markdown语法边写博客，对照编辑模式和实际效果。</p>
 <h2 id="3-8__u53D1_u5E03_u6587_u7AE0"><a href="#3-8__u53D1_u5E03_u6587_u7AE0" class="headerlink" title="3.8    发布文章"></a>3.8    发布文章</h2><p>生成Markdown格式的文件，替换Hexo new生成的文件，重新生成并发布。到博客查看效果，不合意<br>的话修改并重新生成和发布。</p>
+<p>接下来将介绍的是 <a href="http://dabinge.github.io/2016/02/25/Mac%E4%B8%8BHexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" target="_blank" rel="external">Mac下Hexo环境搭建</a>。</p>
 <p>转自大彬的 <a href="http://dabinge.github.io/2016/02/04/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99%E6%80%BB%E6%8B%AC/" target="_blank" rel="external">技术博客编写总括</a></p>
 <hr>
 ]]></content>
