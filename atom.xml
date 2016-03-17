@@ -107,7 +107,7 @@
     <link href="http://yoursite.com/2016/02/26/%E5%85%B3%E8%81%94Github%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2016/02/26/关联Github博客/</id>
     <published>2016-02-26T03:08:33.000Z</published>
-    <updated>2016-03-17T01:26:10.000Z</updated>
+    <updated>2016-03-17T01:30:03.000Z</updated>
     <content type="html"><![CDATA[<p><strong>编写本博客环境:    Mac OS 10.11.3,      Mou 0.8.7</strong></p>
 <p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a></p>
 <h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>上一编博客已经介绍了<a href="http://dabinge.github.io/2016/02/25/Mac%E4%B8%8BHexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" target="_blank" rel="external">Mac下Hexo环境搭建</a>，相信大家已经可以看到自己的博客了。<br>但是博客地址是<a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a>，属于本地地址，还要开启服务“hexo server”<br>才能看。而现在有很多人把自己的博客关联到网上的一些平台，<a href="http://blog.sina.com.cn/" target="_blank" rel="external">比如新浪</a>，<a href="http://www.csdn.net/" target="_blank" rel="external">CSDN</a>，<br><a href="https://github.com" target="_blank" rel="external">Github</a>和<a href="http://www.cnblogs.com/" target="_blank" rel="external">博客园</a>等。小编选择的是国际平台的Github，因为Github人气旺，上面<br>的资源比较优质，还考虑到后面要把自己写得好的源码上传到Github，所以选择它。  </p>
@@ -126,7 +126,7 @@ branch : master
 $ vim _config.yml
 </code></pre><p>输入小写字母i进入编辑状态，修改#Deployment下的代码。<br>改好#Deployment后，在英文键盘输入模式下，按Esc，输入冒号和wq保存并退出，如:wq</p>
 <pre><code>$ hexo d -g
-</code></pre><p>发布后到Github博客，也是仓库地址查看效果。<a href="http://Github用户（即使有大写也全要是小写）.github.io/" target="_blank" rel="external">http://Github用户（即使有大写也全要是小写）.github.io/</a> ，小编的是<a href="http://dabinge.github.io。" target="_blank" rel="external">http://dabinge.github.io。</a></p>
+</code></pre><p>发布后到Github博客，也是仓库地址查看效果。<a href="http://Github用户（即使有大写也全要是小" target="_blank" rel="external">http://Github用户（即使有大写也全要是小</a><br>写）.github.io/ ，小编的是 <a href="http://dabinge.github.io/" target="_blank" rel="external">http://dabinge.github.io/</a> 。</p>
 <p>至此，关联Github和hexo博客已经完成，下一篇介绍的是<a href="http://dabinge.github.io/2016/02/26/%E7%BC%96%E5%86%99%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">编写博客</a>。</p>
 ]]></content>
     <summary type="html">
