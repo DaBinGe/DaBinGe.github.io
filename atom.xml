@@ -4,7 +4,7 @@
   <subtitle><![CDATA[做什么都一样，用心去做都可以做好。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-26T10:03:00.000Z</updated>
+  <updated>2016-03-18T04:11:36.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,92 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[iOS开发 输入字数计算、限制]]></title>
+    <link href="http://yoursite.com/2016/03/18/iOS%E5%BC%80%E5%8F%91-%E8%BE%93%E5%85%A5%E5%AD%97%E6%95%B0%E8%AE%A1%E7%AE%97%E3%80%81%E9%99%90%E5%88%B6/"/>
+    <id>http://yoursite.com/2016/03/18/iOS开发-输入字数计算、限制/</id>
+    <published>2016-03-18T01:24:01.000Z</published>
+    <updated>2016-03-18T04:11:36.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>编写本博客相关环境：Mac OS 10.11.3，Mou 0.8.7，Xcode 7.2 (7C68)，iOS 9.2</strong></p>
+<p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a></p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>This is a introduction of caculating or limiting text <strong>word counts</strong>.<br>The text is DBC case or SBC case.<br>本文介绍全角字符和忽略全角字符的文本字数统计或限制。</p>
+<h1 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h1><p>Editting in UITextField,these codes should be use for the protocol method<br>“- (BOOL)textField:(UITextField <em>)textField shouldChangeCharactersInRange:<br>(NSRange)range replacementString:(NSString </em>)string”,while UITextView is<br>“- (BOOL)textView:(UITextView <em>)textView shouldChangeTextInRange:(NSRange)range<br> replacementText:(NSString </em>)text”.    </p>
+<p>在UITextField和UITextView编辑时，以下代码分别用在其”输入许可”的代理方法shouldChangeCharactersInRange<br>和shouldChangeTextInRange中。</p>
+<h1 id="DBC_case__28Half-width_29_characters"><a href="#DBC_case__28Half-width_29_characters" class="headerlink" title="DBC case (Half-width) characters"></a>DBC case (Half-width) characters</h1><p>Considering NSString objctive’s length,such as string.length, as word counts.<br>不考虑全角字符</p>
+<pre><code>    if (range.location &gt;= wordCount &amp;&amp; string.length) {
+        return NO;
+    }else if (string.length + range.location &gt; wordCount) {
+        textField.text = [textField.text stringByAppendingString:[string substringToIndex:wordCount - range.location]];
+        return NO;
+    }
+    return YES;
+</code></pre><h1 id="SBC_case__28Full-width_29_charaters"><a href="#SBC_case__28Full-width_29_charaters" class="headerlink" title="SBC case (Full-width) charaters"></a>SBC case (Full-width) charaters</h1><ul>
+<li>A Full-width charater is counted two byte,a Half-width charater is counted one<br>byte.<br>区分全角、半角计算文本字数。<br>The limitCount is a const integer value which is the max count that user can input.<br>limitCount是允许用户输入的最大字数。</li>
+</ul>
+<pre><code>    if (!text.length) {//backspace
+        return YES;
+    }
+    int count = [ToolObjc wordCountWithText:[textView.text                 stringByAppendingString:text]];//charater counts
+    if (count &gt;= limitCount) {
+        count = limitCount - [ToolObjc wordCountWithText:textView.text];//The remaining words
+        textView.text = [textView.text stringByAppendingString:[text                             substringToIndex:count / 2]];
+        _lbCount.text = @&quot;0&quot;;
+        return NO;
+    }
+    return YES;
+</code></pre><ul>
+<li>Another way below is caculating for the Full-width charaters count:<br>下面的方法是计算包含全角字符的文本字数：</li>
+</ul>
+<pre><code>#import &quot;RegexKitLite.h&quot;
+</code></pre><pre><code>- (int)calcStrWordCount:(NSString *)str {
+    int nResult = 0;
+    NSString *strSourceCpy = [str copy];
+    NSMutableString *strCopy =[[NSMutableString alloc] initWithString: strSourceCpy];
+    NSArray *array = [strCopy componentsMatchedByRegex:@&quot;((news|telnet|nttp|file|http|ftp|https)://){1}(([-A-Za-z0-9]+(\\.[-A-Za-z0-9]+)*(\\.[-A-Za-z]{2,5}))|([0-9]{1,3}(\\.[0-9]{1,3}){3}))(:[0-9]*)?(/[-A-Za-z0-9_\\$\\.\\+\\!\\*\\(\\),;:@&amp;=\\?/~\\#\\%]*)*&quot;];
+    if ([array count] &gt; 0) {
+        for (NSString *itemInfo in array) {
+            NSRange searchRange = {0};
+            searchRange.location = 0;
+            searchRange.length = [strCopy length];
+            [strCopy replaceOccurrencesOfString:itemInfo withString:@&quot; &quot; options:NSCaseInsensitiveSearch range:searchRange];
+        }
+    }
+
+    char *pchSource = (char *)[strCopy cStringUsingEncoding:NSUTF8StringEncoding];
+    int sourcelen = strlen(pchSource);
+
+    int nCurNum = 0; //current word count
+    for (int n = 0; n &lt; sourcelen; ) {
+        if( *pchSource &amp; 0x80 ) {
+            pchSource += 3; // NSUTF8StringEncoding encoding Chinese words is counted as 3 bytes
+            n += 3;
+            nCurNum += 2;
+        }
+        else {
+            pchSource++;
+            n += 1;
+            nCurNum += 1;
+        }
+    }
+    //the last word that insuffices one is calculated for one
+    nResult = nCurNum / 2 + nCurNum % 2;  
+
+    [strSourceCpy release];
+    [strCopy release];
+    return nResult;
+}
+</code></pre><p>The limit word count codes above compatible with users’ <strong>paste</strong> action.<br>以上限制字数代码在用户粘贴时也有效。</p>
+<p>转自大彬的 <a href="/">iOS开发 输入字数计算、限制</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong>编写本博客相关环境：Mac OS 10.11.3，Mou 0.8.7，Xcode 7.2 (7C68)，iOS 9.2</strong></p>
+<p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" targe]]>
+    </summary>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[编写博客]]></title>
