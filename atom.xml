@@ -4,7 +4,7 @@
   <subtitle><![CDATA[做什么都一样，用心去做都可以做好。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-23T02:02:59.000Z</updated>
+  <updated>2016-03-23T02:07:07.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2016/03/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8D%95%E9%93%BE%E8%A1%A8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
     <id>http://yoursite.com/2016/03/22/数据结构-单链表基本操作/</id>
     <published>2016-03-22T09:36:13.000Z</published>
-    <updated>2016-03-23T02:02:59.000Z</updated>
+    <updated>2016-03-23T02:07:07.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://github.com/DaBinGe/SingleLinkedList_C" target="_blank" rel="external">Download the source codes on Github.</a>   </p>
 <h1 id="1-_IDE"><a href="#1-_IDE" class="headerlink" title="1.    IDE"></a>1.    IDE</h1><p>Mac OS EI Capitan 10.11.3,Xcode 7.2 (7C68),Mou 0.8.7</p>
 <h1 id="2-_Abstrat"><a href="#2-_Abstrat" class="headerlink" title="2.    Abstrat"></a>2.    Abstrat</h1><p>The basic operations of single linked list in C langeage below:<br>本文主要讲单链表以下这些基本操作：</p>
@@ -383,7 +383,7 @@
     printf(&quot;The node data is %lld.\n&quot;,headNode-&gt;data);
 }
 </code></pre><ul>
-<li>Print the whole link’s data.<br>打印链表的所有数据。</li>
+<li>Print the whole link’s datas.<br>打印链表的所有数据。</li>
 </ul>
 <pre><code>void printLinkedList(LinkedList_Long headNode) {
     LinkedList_Long pNext = headNode-&gt;next;
