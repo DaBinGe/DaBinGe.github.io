@@ -4,7 +4,7 @@
   <subtitle><![CDATA[做什么都一样，用心去做都可以做好。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-18T10:07:38.000Z</updated>
+  <updated>2016-03-23T01:43:17.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,418 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[数据结构-单链表基本操作-C语言]]></title>
+    <link href="http://yoursite.com/2016/03/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8D%95%E9%93%BE%E8%A1%A8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2016/03/22/数据结构-单链表基本操作/</id>
+    <published>2016-03-22T09:36:13.000Z</published>
+    <updated>2016-03-23T01:43:17.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="https://github.com/DaBinGe/SingleLinkedList_C" target="_blank" rel="external">Download the source codes on Github</a></p>
+<h1 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h1><p>Mac OS EI Capitan 10.11.3,Xcode 7.2 (7C68),Mou 0.8.7</p>
+<h1 id="Abstrat"><a href="#Abstrat" class="headerlink" title="Abstrat"></a>Abstrat</h1><p>The basic operations of single linked list in C langeage below:<br>本文主要讲单链表以下这些基本操作：</p>
+<ul>
+<li>Create  创建</li>
+<li>Query   查询</li>
+<li>Add     添加</li>
+<li>Modify  修改</li>
+<li>Sort    排序</li>
+<li>Delete  删除</li>
+<li>Ergodic    遍历</li>
+<li>Other    其它</li>
+</ul>
+<p>Previously,it is best for you to learn the <strong>typedef struct</strong> syntax first if you have not learned<br>or forget  its usage.<br>如果你没有学过结构体定义的语法或记不清，请先学习它的用法。<br><a href="http://blog.csdn.net/haiou0/article/details/6877718" target="_blank" rel="external">结构体定义：struct与typedef struct 用法详解和用法小结</a><br><a href="http://blog.sina.com.cn/s/blog_4fdabc820100fsxu.html" target="_blank" rel="external">结构体定义 typedef struct 用法详解和用法小结</a></p>
+<h1 id="Basic_operations"><a href="#Basic_operations" class="headerlink" title="Basic operations"></a>Basic operations</h1><h2 id="Create"><a href="#Create" class="headerlink" title="Create"></a>Create</h2><ul>
+<li>Create a link with data [0…7] automatically.<br>自动创建结点数据从0到7的单链表。</li>
+</ul>
+<pre><code>LinkedList_Long createLinked() {
+    LinkedList_Long head = createHeadNode();
+    if (head == NULL) {
+        return NULL;
+    }
+    LongNodeData amount = 0;
+    LinkedList_Long pLast = NULL;
+    for (LongNodeData index = 0; index &lt; 8; index++) {
+        LinkedList_Long pNext = createHeadNode();
+        if (pNext == NULL) {
+            return head;
+        }
+        if (!index) {//append the first node to header
+            pLast = pNext;
+            head-&gt;next = pLast;
+
+        }else {//appending the node to last node
+            pLast-&gt;next = pNext;
+            pLast = pNext;
+        }
+        pNext-&gt;data = index;
+        amount++;
+    }
+    head-&gt;data = amount;
+
+    return head;
+}
+</code></pre><ul>
+<li>Create link and receive user’s input continously unless entering the exitData to stop.<br>创建链表并连续接收用户输入的数据，输入指定的数据来结束此次创建。</li>
+</ul>
+<pre><code>LinkedList_Long createLinkedListWithExitData(LongNodeData exitData,bool isAtHeader) {
+    LinkedList_Long head = createHeadNode();
+    if (head == NULL) {
+        return NULL;
+    }
+    LongNodeData amount = 0;
+    LinkedList_Long pLast = isAtHeader ? NULL : head;
+
+    while (1) {
+        LinkedList_Long pNext = createHeadNode();
+        if (pNext == NULL) {
+            break;
+        }
+        printf(&quot;Enter an integer data,enter %lld to exit the creating.\n&quot;,exitData);
+        scanf(&quot;%lld&quot;,&amp;pNext-&gt;data);
+        if (pNext-&gt;data == exitData) {
+            break;
+        }
+        if (isAtHeader) {//add to header
+            if (amount != 0) {//is not the first node
+                pNext-&gt;next = pLast;
+            }
+        }else {//add to tail
+            pLast-&gt;next = pNext;
+        }
+        pLast = pNext;
+        amount++;
+    }
+    head-&gt;data = amount;
+    if (isAtHeader) {
+        head-&gt;next = pLast;
+    }
+    return head;
+}
+</code></pre><h2 id="Query"><a href="#Query" class="headerlink" title="Query"></a>Query</h2><ul>
+<li>Query the node at index of the link.<br>根据索引获取结点。</li>
+</ul>
+<pre><code>LinkedList_Long nodeAtIndex(LinkedList_Long head,LongNodeData index) {
+    if (head == NULL) {
+        return NULL;
+    }
+    if (index &lt; 0) {
+        printf(&quot;Please enter an non-negative integer.\n&quot;);
+        return NULL;
+    }
+    if (index &gt;= head-&gt;data) {
+        printf(&quot;The index %lld beyond bounds [0...%lld],and \n&quot;
+               &quot;please be sure the index is counted from 0.\n&quot;,index,head-&gt;data - 1);
+        return NULL;
+    }
+
+    LinkedList_Long pNext = head-&gt;next;
+    LongNodeData num = 0;
+    while (pNext &amp;&amp; num &lt; index) {
+        pNext = pNext-&gt;next;
+        num++;
+    }
+    return pNext;
+}
+</code></pre><ul>
+<li>Query the lastest node of the link.<br>获取链表最后一个结点。</li>
+</ul>
+<pre><code>LinkedList_Long lastNodeOfLinkedList(LinkedList_Long head) {
+    if (head == NULL) {
+        return NULL;
+    }
+    LinkedList_Long pNext = head-&gt;next;
+    if (pNext == NULL) {
+        return NULL;
+    }
+    while (pNext-&gt;next) {
+        pNext = pNext-&gt;next;
+    }
+    return pNext;
+}
+</code></pre><h2 id="Insert"><a href="#Insert" class="headerlink" title="Insert"></a>Insert</h2><ul>
+<li>Insert a new node,inputed by user instantly, at index of the link.<br>在指定索引插入节点</li>
+</ul>
+<pre><code>LinkedList_Long insertOneNodeAtIndex(LinkedList_Long head) {
+    if (head == NULL) {
+        printf(&quot;Insert failed,as the linked list is NULL.&quot;);
+        return head;
+    }
+    LinkedList_Long node = createHeadNode();
+    if (node == NULL) {
+        printf(&quot;Insert failed for the sake of memory error.\n&quot;);
+        return head;
+    }
+    LongNodeData index = 0;
+    printf(&quot;Enter the index,a non-negative integer,as the insert location.\n&quot;);
+    scanf(&quot;%lld&quot;,&amp;index);
+    while (!isIndexInsideLinkedList(index, head)) {
+        printf(&quot;please enter agan.\n&quot;);
+        index = 0;
+        scanf(&quot;%lld&quot;,&amp;index);
+    }
+    printf(&quot;please enter the data.\n&quot;);
+    scanf(&quot;%lld&quot;,&amp;node-&gt;data);
+
+    if (index &lt; 0) {
+        index = 0;
+    }
+    return insertNodeIntoListAtIndex(head, node, index);
+}
+</code></pre><ul>
+<li>Insert the node into the link at index of the link.<br>插入一个结点到链表的指定索引</li>
+</ul>
+<pre><code>LinkedList_Long insertNodeIntoListAtIndex(LinkedList_Long head,LinkedList_Long node,LongNodeData index) {
+    if (head == NULL) {
+        return NULL;
+    }
+    if (node == NULL) {
+        printf(&quot;Insert failed,because the node is NULL.\n&quot;);
+        return head;
+    }
+    if ((*head).next == NULL) {//node count is 0
+        (*head).next = node;
+        return head;
+    }
+    if (index &gt; (*head).data - 1) {
+        LinkedList_Long tailNode = lastNodeOfLinkedList(head);
+        (*tailNode).next = node;
+
+    }else {
+        if (index == 0) {
+            (*node).next = (*head).next;
+            (*head).next = node;
+        }else {
+            LinkedList_Long lastNode = nodeAtIndex(head, index - 1);
+            if (lastNode == NULL) {
+                printf(&quot;Got node at index failed!\n&quot;);
+                return head;
+            }
+            (*node).next = (*lastNode).next;
+            (*lastNode).next = node;
+        }
+    }
+
+    return head;
+}
+</code></pre><h2 id="Modify"><a href="#Modify" class="headerlink" title="Modify"></a>Modify</h2><ul>
+<li>Exchage two data of two nodes.<br>交换两个结点的数据。</li>
+</ul>
+<pre><code>void exchangeTwoNodeData(LinkedList_Long nodeLeft,LinkedList_Long nodeRight) {
+    LongNodeData data = nodeLeft-&gt;data;
+    nodeLeft-&gt;data = nodeRight-&gt;data;
+    nodeRight-&gt;data = data;
+}
+</code></pre><ul>
+<li>Exchage two nodes’ data of the link in the two indexs.<br>通过索引交换两个结点。</li>
+</ul>
+<pre><code>LinkedList_Long exchageTwoNode (LinkedList_Long head,LongNodeData indexLeft,LongNodeData indexRight) {
+    if (head == NULL) {
+        printf(&quot;Exchaged failed.The linkedList is NULL\n&quot;);
+        return head;
+    }
+    if (head-&gt;data &lt; 1) {
+        printf(&quot;Exchaged failed.The linkedList has nodes less than 2.\n&quot;);
+        return head;
+    }
+    if (indexRight == indexLeft) {
+        return head;
+    }
+    if (!isIndexInsideLinkedList(indexLeft, head) || !isIndexInsideLinkedList(indexRight, head)) {
+        return head;
+    }
+
+    printf(&quot;Begin exchaging two node.\n&quot;);
+    LinkedList_Long nodeLeft = nodeAtIndex(head, indexLeft);
+    LinkedList_Long nodeRight = nodeAtIndex(head, indexRight);
+    exchangeTwoNodeData(nodeLeft, nodeRight);
+    return head;
+}
+</code></pre><ul>
+<li>Revert the link by operating its datas.<br>链表逆置。</li>
+</ul>
+<pre><code>void revertLinkedList (LinkedList_Long head) {
+    if (head == NULL) {
+        printf(&quot;Revert failed,the linkedList is NULL.\n&quot;);
+        return;
+    }
+    LongNodeData count = head-&gt;data - 1;
+    if (count &lt; 2) {
+        return;
+    }
+    for (LongNodeData index = 0; index &lt; count; index++,count--) {
+        exchageTwoNode(head, index, count);
+    }
+}
+</code></pre><h2 id="Sort"><a href="#Sort" class="headerlink" title="Sort"></a>Sort</h2><p>Sort the link with two ways,by operating the node count or node pointer.<br>通过操作链表结点个数或者结点指针对链表进行排序。</p>
+<pre><code>LinkedList_Long sortLinkedList(LinkedList_Long head,bool accending) {
+    //mode 1,using node count
+    if (head-&gt;data &lt; 1) {
+        return head;
+    }
+    LinkedList_Long node = head-&gt;next;
+    for (LongNodeData row = 0; row &lt; head-&gt;data - 1; row++) {
+        LinkedList_Long pNext = node-&gt;next;
+        if (pNext == NULL || node == NULL) {
+            break;
+        }
+        for (LongNodeData coloum = 0; coloum &lt; head-&gt;data; coloum++) {
+            if (accending) {
+                if (node-&gt;data &gt; pNext-&gt;data) {
+                    exchangeTwoNodeData(node, pNext);
+                }
+            }else {
+                if (node-&gt;data &lt; pNext-&gt;data) {
+                    exchangeTwoNodeData(node, pNext);
+                }
+            }
+            pNext = pNext-&gt;next;
+            if (pNext == NULL) {
+                break;
+            }
+        }
+        node = node-&gt;next;
+    }
+
+    return head;
+
+    //mode 2,using pointer
+    if (head-&gt;next == NULL) {
+        return head;
+    }
+    LinkedList_Long qNode = head-&gt;next;
+    while (qNode) {
+        LinkedList_Long qNext = qNode-&gt;next;
+        while (qNext) {
+            if (accending) {
+                if (qNode-&gt;data &gt; qNext-&gt;data) {
+                    exchangeTwoNodeData(qNode, qNext);
+                }
+            }else {
+                if (qNode-&gt;data &lt; qNext-&gt;data) {
+                    exchangeTwoNodeData(qNode, qNext);
+                }
+            }
+            qNext = qNext-&gt;next;
+        }
+        qNode = qNode-&gt;next;
+    }
+    return head;
+}
+</code></pre><h2 id="Delete"><a href="#Delete" class="headerlink" title="Delete"></a>Delete</h2><ul>
+<li>Delete one node at the index of the link.<br>删除一个指定索引的结点。</li>
+</ul>
+<pre><code>LinkedList_Long deleteNodeAtIndex (LinkedList_Long head,LongNodeData index) {
+    if (head == NULL) {
+        printf(&quot;Delete failed,the linked list is NULL.\n&quot;);
+        return head;
+    }
+    if (head-&gt;next == NULL) {
+        printf(&quot;Delete failed,the linked list&#39;s node count is 0.\n&quot;);
+        return head;
+    }
+    if (index &gt;= head-&gt;data) {
+        printf(&quot;Delete failed,index %lld beyond bounds [0...%lld].\n&quot;,index,head-&gt;data);
+        return head;
+    }
+    if (index == 0) {
+        LinkedList_Long node = nodeAtIndex(head, 0);
+        head-&gt;next = node-&gt;next;
+        node-&gt;next = NULL;
+        free(node);
+
+    }else {
+        LinkedList_Long node = nodeAtIndex(head, index - 1);
+        LinkedList_Long nodeDelete = node-&gt;next;
+        node-&gt;next = nodeDelete-&gt;next;
+        nodeDelete = NULL;
+        free(nodeDelete);
+
+    }
+    head-&gt;data--;
+    return head;
+}
+</code></pre><ul>
+<li>Delete the whole link and release the memory,release the header node if neccessary.<br>整个链表删除及释放内存，有需要可把头结点也删除。</li>
+</ul>
+<pre><code>LinkedList_Long deleteLinkedList (LinkedList_Long head) {
+    if (head == NULL) {
+        printf(&quot;The linkedList is NULL.\n&quot;);
+        return NULL;
+    }
+    LinkedList_Long list = head-&gt;next;
+    if (list == NULL) {
+        printf(&quot;The LinkedList has no node.\n&quot;);
+        return head;
+    }
+    LongNodeData index = 0;
+    while (list) {
+        LinkedList_Long node = list;
+        list = list-&gt;next;
+        printf(&quot;delete node %lld at index %lld.\n&quot;,node-&gt;data,index++);
+        node-&gt;next = NULL;
+        node = NULL;
+        free(node);
+        head-&gt;data--;
+    }
+    head-&gt;next = NULL;
+    free(head-&gt;next);
+
+    return head;
+}
+</code></pre><h2 id="Ergodic"><a href="#Ergodic" class="headerlink" title="Ergodic"></a>Ergodic</h2><ul>
+<li>Print the node’s data.<br>打印指定结点的数据。</li>
+</ul>
+<pre><code>void printLinkedNode(LinkedList_Long headNode) {
+    if (headNode == NULL) {
+        printf(&quot;The node is NULL.\n&quot;);
+        return;
+    }
+    printf(&quot;The node data is %lld.\n&quot;,headNode-&gt;data);
+}
+</code></pre><ul>
+<li>Print the whole link’s data.<br>打印链表的所有数据。</li>
+</ul>
+<pre><code>void printLinkedList(LinkedList_Long headNode) {
+    LinkedList_Long pNext = headNode-&gt;next;
+    printf(&quot;The linked list has %lld nodes,it is : \n&quot;,headNode-&gt;data);
+
+    while (pNext != NULL) {
+        printf(&quot;%lld, &quot;,pNext-&gt;data);
+        pNext = pNext-&gt;next;
+    }
+    printf(&quot;\n&quot;);
+}
+</code></pre><h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><ul>
+<li>Judging the index is beyond the link or not.<br>判断索引是否超出链表范围。</li>
+</ul>
+<pre><code>bool isIndexInsideLinkedList(LongNodeData index,LinkedList_Long head) {
+    if (index &gt;= head-&gt;data) {
+        printf(&quot;Index %lld beyond bounds [0...%lld].\n&quot;,index,head-&gt;data - 1);
+        return 0;
+    }
+    return 1;
+}
+</code></pre><h1 id="Test_guide"><a href="#Test_guide" class="headerlink" title="Test guide"></a>Test guide</h1><p>Testing the create function following is primary.The other create functions is similar.<br>首先测试下面创建链表的方法，其它创建链表的方法也类似。</p>
+<pre><code>    LinkedList_Long head = createLinked();
+    printLinkedList(head);
+</code></pre><p>Other testing is the same as the following sort test function.<br>其它函数的测试也和下面排序的函数一样。</p>
+<pre><code>    LinkedList_Long head = createLinked();
+    printLinkedList(head);
+    head = sortLinkedList(head, 1);
+    printf(&quot;*******  Sort results  *****\n&quot;);
+    printLinkedList(head);
+</code></pre><p>转载请标明出处，转自大彬的[数据结构-单链表基本操作-C语言][4]</p>
+<p>[4]:</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="https://github.com/DaBinGe/SingleLinkedList_C" target="_blank" rel="external">Download the source codes on Github</a></p>
+<h1 id]]>
+    </summary>
+    
+      <category term="数据结构,C语言" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[iOS开发 Touch ID 系统功能之指纹识别]]></title>
