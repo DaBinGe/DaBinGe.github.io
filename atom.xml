@@ -4,7 +4,7 @@
   <subtitle><![CDATA[做什么都一样，用心去做都可以做好。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-23T02:07:07.000Z</updated>
+  <updated>2016-06-01T10:21:42.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,106 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Ivar和objc_property_t方式对自定义模型进行归解档]]></title>
+    <link href="http://yoursite.com/2016/06/01/Ivar%E5%92%8Cobjc-property-t%E6%96%B9%E5%BC%8F%E5%AF%B9%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B%E8%BF%9B%E8%A1%8C%E5%BD%92%E8%A7%A3%E6%A1%A3/"/>
+    <id>http://yoursite.com/2016/06/01/Ivar和objc-property-t方式对自定义模型进行归解档/</id>
+    <published>2016-06-01T10:05:24.000Z</published>
+    <updated>2016-06-01T10:21:42.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>编写本博客相关环境：Mac OS EI Capitan 10.11.4，Mou 0.8.7，Xcode 7.3.1 (7D1014)，iOS 9.3.2</strong>    </p>
+<p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a>    </p>
+<p>工程项目下载请到<a href="https://github.com/DaBinGe/UniversalArchiveDemo" target="_blank" rel="external">Github下载地址</a>    </p>
+<h1 id="u7B80_u8981_u8BF4_u660E"><a href="#u7B80_u8981_u8BF4_u660E" class="headerlink" title="简要说明"></a>简要说明</h1><p>This demo describes two ways to archive or unarchive all of the NSObject objects and its<br>subclass objects.One way uses Ivar and another uses objc_property_t.<br>本例子通过objc/runtime，分别使用Ivar和objc_property_t两种方式，实现id对象类型的归解档。</p>
+<p>IDE:  Mac OS EI Capitan 10.11.4,Xcode 7.3.1 (7D1014)</p>
+<h1 id="u5B9E_u73B0_u539F_u7406"><a href="#u5B9E_u73B0_u539F_u7406" class="headerlink" title="实现原理"></a>实现原理</h1><p>Getting the object’s variable names by runtime,and getting variable value by Key-Value-Coding,<br>to encode or decode in loop.<br>通过运行时，循环取出当前对象的变量名，以及KVC通过变量名进行取值赋值，再通过得到的键和值进行归档解档。</p>
+<h1 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h1><p>相关的Objc运行时模块： @import ObjectiveC.runtime;<br>或头文件： #import <objc runtime.h="">    </objc></p>
+<p>Please copy or move the files CommonArchiveModel.h and CommonArchiveModel.m to your project,<br>then you can use it directly.<br>使用时，直接引入通用归解档基类CommonArchiveModel到相应工程中即可。</p>
+<h2 id="Archive"><a href="#Archive" class="headerlink" title="Archive"></a>Archive</h2><p>Create a new Cocoa Class ,which is subclass of CommonArchiveModel,and add properties<br>and variables to it.Then use the method archiveRootObject:toFile: of NSKeyedArchiver to<br>archive the model to designated path.<br>新建CommonArchiveModel子类，在该子类添加相关的属性或实例变量；<br>把需要归档的子类对象用[NSKeyedArchiver archiveRootObject:toFile:]归档到指定目录下。    </p>
+<h3 id="objc_property_t_Archive_Codes"><a href="#objc_property_t_Archive_Codes" class="headerlink" title="objc_property_t Archive Codes"></a>objc_property_t Archive Codes</h3><pre><code>- (void)encodeWithCoder:(NSCoder *)aCoder {
+    unsigned int outCount;
+    objc_property_t *properties = class_copyPropertyList([self class], &amp;outCount);
+    for (int i=0; i&lt;outCount; i++) {
+        objc_property_t property = properties[i];
+        const char *char_f = property_getName(property);
+        //propertyName包含下划线，对此功能并无影响
+        NSString *propertyName = [NSString stringWithUTF8String:char_f];
+        id propertyValue = [self valueForKey:propertyName];
+        if (!propertyName || !propertyValue) {
+            continue;
+        }
+        [aCoder encodeObject:propertyValue forKey:propertyName];
+    }
+    free(properties);
+}
+</code></pre><h3 id="Ivar_Archive_Codes"><a href="#Ivar_Archive_Codes" class="headerlink" title="Ivar Archive Codes"></a>Ivar Archive Codes</h3><pre><code>- (void)encodeWithCoder:(NSCoder *)aCoder {
+    unsigned int outCount, index;
+    Ivar *ivars = class_copyIvarList([self class], &amp;outCount);
+
+    for (index = 0; index &lt; outCount; index++) {
+        Ivar varName = ivars[index];
+        NSString *varKey = [NSString stringWithCString:ivar_getName(varName) encoding:NSUTF8StringEncoding];
+        NSLog(@&quot;encode varKey = %@&quot;,varKey);
+
+        id varValue = [self valueForKey:varKey];//从当前对象取值
+        if (!varKey || !varValue || [[self ignoreVarKeys] containsObject:varKey]) {
+            continue;
+        }
+        [aCoder encodeObject:varValue forKey:varKey];//归档
+    }
+    free(ivars);
+}
+</code></pre><h2 id="Unarchive"><a href="#Unarchive" class="headerlink" title="Unarchive"></a>Unarchive</h2><p>Call the class method unarchiveObjectWithFile of NSKeyedUnarchiver to unarchive the object<br>which was archived before.And the log its values that is used to compare the values before archive.<br>调用[NSKeyedUnarchiver unarchiveObjectWithFile:]解档一个自定义模型，查看基属性的值是否<br>和之前归档的一致。</p>
+<h3 id="objc_property_t_Unarchive_Codes"><a href="#objc_property_t_Unarchive_Codes" class="headerlink" title="objc_property_t Unarchive Codes"></a>objc_property_t Unarchive Codes</h3><pre><code>- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super init];
+    if (self) {
+        unsigned int outCount;
+        objc_property_t *properties = class_copyPropertyList([self class], &amp;outCount);
+        for (int i=0; i&lt;outCount; i++) {
+            objc_property_t property = properties[i];
+            const char *char_f = property_getName(property);
+            NSString *propertyName = [NSString stringWithUTF8String:char_f];
+            id propertyValue = [aDecoder decodeObjectForKey:propertyName];
+            if (!propertyName || !propertyValue) {
+                continue;
+            }
+            [self setValue:propertyValue forKey:propertyName];//此外可扩展，写个接口传进一个字典，把key/value映射到self
+        }
+        free(properties);
+    }
+    return self;
+}
+</code></pre><h3 id="Ivar_Unarchive_Codes"><a href="#Ivar_Unarchive_Codes" class="headerlink" title="Ivar Unarchive Codes"></a>Ivar Unarchive Codes</h3><pre><code>- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super init];
+    if (self) {
+        unsigned int outCount,index;
+        Ivar *ivars = class_copyIvarList([self class], &amp;outCount);
+        for (index=0; index&lt;outCount; index++) {
+            Ivar varName = ivars[index];
+            const char *char_f = ivar_getName(varName);
+            NSString *varKey = [NSString stringWithUTF8String:char_f];
+
+            id varValue = [aDecoder decodeObjectForKey:varKey];//解档
+            if (!varKey || ! varValue  || [[self ignoreVarKeys] containsObject:varKey]) {
+                continue;
+            }
+            NSLog(@&quot;decode varKey = %@&quot;,varKey);
+            [self setValue:varValue forKey:varKey];//给当前对象赋值
+        }
+        free(ivars);
+    }
+    return self;
+}
+</code></pre><p>Please look at the project files to know other details.<br>其它细节请查看工程的文件。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong>编写本博客相关环境：Mac OS EI Capitan 10.11.4，Mou 0.8.7，Xcode 7.3.1 (7D1014)，iOS 9.3.2</strong>    </p>
+<p>欢迎大家关注小编的博客 <a href="http://dabi]]>
+    </summary>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[数据结构-单链表基本操作-C语言]]></title>
@@ -786,7 +886,7 @@
     <link href="http://yoursite.com/2016/02/26/%E5%85%B3%E8%81%94Github%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2016/02/26/关联Github博客/</id>
     <published>2016-02-26T03:08:33.000Z</published>
-    <updated>2016-03-17T01:30:03.000Z</updated>
+    <updated>2016-05-31T08:02:15.000Z</updated>
     <content type="html"><![CDATA[<p><strong>编写本博客环境:    Mac OS 10.11.3,      Mou 0.8.7</strong></p>
 <p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a></p>
 <h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>上一编博客已经介绍了<a href="http://dabinge.github.io/2016/02/25/Mac%E4%B8%8BHexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" target="_blank" rel="external">Mac下Hexo环境搭建</a>，相信大家已经可以看到自己的博客了。<br>但是博客地址是<a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a>，属于本地地址，还要开启服务“hexo server”<br>才能看。而现在有很多人把自己的博客关联到网上的一些平台，<a href="http://blog.sina.com.cn/" target="_blank" rel="external">比如新浪</a>，<a href="http://www.csdn.net/" target="_blank" rel="external">CSDN</a>，<br><a href="https://github.com" target="_blank" rel="external">Github</a>和<a href="http://www.cnblogs.com/" target="_blank" rel="external">博客园</a>等。小编选择的是国际平台的Github，因为Github人气旺，上面<br>的资源比较优质，还考虑到后面要把自己写得好的源码上传到Github，所以选择它。  </p>
@@ -805,7 +905,7 @@ branch : master
 $ vim _config.yml
 </code></pre><p>输入小写字母i进入编辑状态，修改#Deployment下的代码。<br>改好#Deployment后，在英文键盘输入模式下，按Esc，输入冒号和wq保存并退出，如:wq</p>
 <pre><code>$ hexo d -g
-</code></pre><p>发布后到Github博客，也是仓库地址查看效果。<a href="http://Github用户（即使有大写也全要是小" target="_blank" rel="external">http://Github用户（即使有大写也全要是小</a><br>写）.github.io/ ，小编的是 <a href="http://dabinge.github.io/" target="_blank" rel="external">http://dabinge.github.io/</a> 。</p>
+</code></pre><p>发布后到Github博客，也是仓库地址查看效果。http: //Github用户（即使有大写也全要是小<br>写）.github.io/ ，小编的是 <a href="http://dabinge.github.io/" target="_blank" rel="external">http://dabinge.github.io/</a> 。</p>
 <p>至此，关联Github和hexo博客已经完成，下一篇介绍的是<a href="http://dabinge.github.io/2016/02/26/%E7%BC%96%E5%86%99%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">编写博客</a>。</p>
 ]]></content>
     <summary type="html">
