@@ -4,7 +4,7 @@
   <subtitle><![CDATA[做什么都一样，用心去做都可以做好。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-01T10:21:42.000Z</updated>
+  <updated>2016-06-02T01:26:23.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,11 +19,8 @@
     <link href="http://yoursite.com/2016/06/01/Ivar%E5%92%8Cobjc-property-t%E6%96%B9%E5%BC%8F%E5%AF%B9%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B%E8%BF%9B%E8%A1%8C%E5%BD%92%E8%A7%A3%E6%A1%A3/"/>
     <id>http://yoursite.com/2016/06/01/Ivar和objc-property-t方式对自定义模型进行归解档/</id>
     <published>2016-06-01T10:05:24.000Z</published>
-    <updated>2016-06-01T10:21:42.000Z</updated>
-    <content type="html"><![CDATA[<p><strong>编写本博客相关环境：Mac OS EI Capitan 10.11.4，Mou 0.8.7，Xcode 7.3.1 (7D1014)，iOS 9.3.2</strong>    </p>
-<p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a>    </p>
-<p>工程项目下载请到<a href="https://github.com/DaBinGe/UniversalArchiveDemo" target="_blank" rel="external">Github下载地址</a>    </p>
-<h1 id="u7B80_u8981_u8BF4_u660E"><a href="#u7B80_u8981_u8BF4_u660E" class="headerlink" title="简要说明"></a>简要说明</h1><p>This demo describes two ways to archive or unarchive all of the NSObject objects and its<br>subclass objects.One way uses Ivar and another uses objc_property_t.<br>本例子通过objc/runtime，分别使用Ivar和objc_property_t两种方式，实现id对象类型的归解档。</p>
+    <updated>2016-06-02T01:26:23.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="u7B80_u8981_u8BF4_u660E"><a href="#u7B80_u8981_u8BF4_u660E" class="headerlink" title="简要说明"></a>简要说明</h1><p>This demo describes two ways to archive or unarchive all of the NSObject objects and its<br>subclass objects.One way uses Ivar and another uses objc_property_t.<br>本例子通过objc/runtime，分别使用Ivar和objc_property_t两种方式，实现id对象类型的归解档。</p>
 <p>IDE:  Mac OS EI Capitan 10.11.4,Xcode 7.3.1 (7D1014)</p>
 <h1 id="u5B9E_u73B0_u539F_u7406"><a href="#u5B9E_u73B0_u539F_u7406" class="headerlink" title="实现原理"></a>实现原理</h1><p>Getting the object’s variable names by runtime,and getting variable value by Key-Value-Coding,<br>to encode or decode in loop.<br>通过运行时，循环取出当前对象的变量名，以及KVC通过变量名进行取值赋值，再通过得到的键和值进行归档解档。</p>
 <h1 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h1><p>相关的Objc运行时模块： @import ObjectiveC.runtime;<br>或头文件： #import <objc runtime.h="">    </objc></p>
@@ -103,11 +100,13 @@
     }
     return self;
 }
-</code></pre><p>Please look at the project files to know other details.<br>其它细节请查看工程的文件。</p>
+</code></pre><p>Please look at the project files from Github to know other details.<br>其它细节请查看Github工程文件。</p>
+<p><strong>编写本博客相关环境：Mac OS EI Capitan 10.11.4，Mou 0.8.7，Xcode 7.3.1 (7D1014)，iOS 9.3.2</strong>    </p>
+<p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a>    </p>
+<p><a href="https://github.com/DaBinGe/UniversalArchiveDemo" target="_blank" rel="external">Github工程项目下载地址</a>    </p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p><strong>编写本博客相关环境：Mac OS EI Capitan 10.11.4，Mou 0.8.7，Xcode 7.3.1 (7D1014)，iOS 9.3.2</strong>    </p>
-<p>欢迎大家关注小编的博客 <a href="http://dabi]]>
+    <![CDATA[<h1 id="u7B80_u8981_u8BF4_u660E"><a href="#u7B80_u8981_u8BF4_u660E" class="headerlink" title="简要说明"></a>简要说明</h1><p>This demo describes two ]]>
     </summary>
     
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
@@ -532,12 +531,10 @@
     <link href="http://yoursite.com/2016/03/18/iOS%E5%BC%80%E5%8F%91-Touch-ID-%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD%E4%B9%8B%E6%8C%87%E7%BA%B9%E8%AF%86%E5%88%AB/"/>
     <id>http://yoursite.com/2016/03/18/iOS开发-Touch-ID-系统功能之指纹识别/</id>
     <published>2016-03-18T07:35:07.000Z</published>
-    <updated>2016-03-18T10:07:38.000Z</updated>
-    <content type="html"><![CDATA[<p><strong>编写本博客相关环境：Mac OS 10.11.3，Mou 0.8.7，Xcode 7.2 (7C68)，iOS 9.2</strong></p>
-<p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a></p>
-<h2 id="Feature"><a href="#Feature" class="headerlink" title="Feature"></a>Feature</h2><p>This blog will simply shows the basic usage of <strong>Touch ID</strong>,one of the device’s system<br>common fuctions,in both Objective C code and Swift code.<br>本文将通过 ObjC 和 Swift 分别介绍常用的系统功能–<strong>Touch ID指纹识别</strong>的基本使用。</p>
+    <updated>2016-06-02T01:24:30.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="Feature"><a href="#Feature" class="headerlink" title="Feature"></a>Feature</h2><p>This blog will simply shows the basic usage of <strong>Touch ID</strong>,one of the device’s system<br>common fuctions,in both Objective C code and Swift code.<br>本文将通过 ObjC 和 Swift 分别介绍常用的系统功能–<strong>Touch ID指纹识别</strong>的基本使用。</p>
 <p>Touch ID is one of the new features of iOS 8.0 version.So the device’s operation<br> system version must be equal or greater than 8.0 .And,the iOS Simulators are unavalable.<br>Touch ID指纹识别是iOS 8.0的新特性，所以设备的系统版本必须大于等于8.0.而且不能在模拟器上使用该功能。</p>
-<h2 id="ObjC_Codes"><a href="#ObjC_Codes" class="headerlink" title="ObjC Codes"></a>ObjC Codes</h2><pre><code>#import &lt;LocalAuthentication/LocalAuthentication.h&gt;
+<h2 id="ObjC_Codes"><a href="#ObjC_Codes" class="headerlink" title="ObjC Codes"></a>ObjC Codes</h2><pre><code> #import &lt;LocalAuthentication/LocalAuthentication.h&gt;
 </code></pre><pre><code>- (void)authenticateUser {
     if ([[[UIDevice currentDevice]systemVersion] floatValue] &lt; 8.0) {
         //point out that Touch ID in current device&#39;s OS is unavalable.
@@ -688,11 +685,12 @@
 <p><a href="http://blog.csdn.net/zhangao0086/article/details/38667315" target="_blank" rel="external">Swift switch usage</a></p>
 <p><a href="http://c.biancheng.net/cpp/html/2426.html" target="_blank" rel="external">Swift enum</a></p>
 <p><a href="http://blog.csdn.net/super_lee2013/article/details/47626427" target="_blank" rel="external">Differance between rawValue and hashValue</a>    </p>
+<p><strong>编写本博客相关环境：Mac OS 10.11.3，Mou 0.8.7，Xcode 7.2 (7C68)，iOS 9.2</strong></p>
+<p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a></p>
 <p>转自大彬的 <a href="http://dabinge.github.io/2016/03/18/iOS%E5%BC%80%E5%8F%91-Touch-ID-%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD%E4%B9%8B%E6%8C%87%E7%BA%B9%E8%AF%86%E5%88%AB/" target="_blank" rel="external">iOS开发 Touch ID 系统功能之指纹识别</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p><strong>编写本博客相关环境：Mac OS 10.11.3，Mou 0.8.7，Xcode 7.2 (7C68)，iOS 9.2</strong></p>
-<p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" targe]]>
+    <![CDATA[<h2 id="Feature"><a href="#Feature" class="headerlink" title="Feature"></a>Feature</h2><p>This blog will simply shows the basic usage of <st]]>
     </summary>
     
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>

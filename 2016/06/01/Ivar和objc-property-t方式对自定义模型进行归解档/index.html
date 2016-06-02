@@ -9,10 +9,7 @@
     
     <meta name="author" content="大彬">
     
-    <meta name="description" content="编写本博客相关环境：Mac OS EI Capitan 10.11.4，Mou 0.8.7，Xcode 7.3.1 (7D1014)，iOS 9.3.2    
-欢迎大家关注小编的博客 大彬的博客    
-工程项目下载请到Github下载地址    
-简要说明This demo describes ">
+    <meta name="description" content="简要说明This demo describes two ways to archive or unarchive all of the NSObject objects and itssubclass objects.One way uses Ivar and another uses objc_p">
     
     
     
@@ -81,7 +78,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-06-01T10:05:24.000Z" itemprop="datePublished">2016-06-01</time>
-    更新日期:<time datetime="2016-06-01T10:21:42.000Z" itemprop="dateModified">2016-06-01</time>
+    更新日期:<time datetime="2016-06-02T01:26:23.000Z" itemprop="dateModified">2016-06-02</time>
     
   </p>
 </header>
@@ -93,10 +90,7 @@
 		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u7B80_u8981_u8BF4_u660E"><span class="toc-number">1.</span> <span class="toc-text">简要说明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u5B9E_u73B0_u539F_u7406"><span class="toc-number">2.</span> <span class="toc-text">实现原理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Usage"><span class="toc-number">3.</span> <span class="toc-text">Usage</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Archive"><span class="toc-number">3.1.</span> <span class="toc-text">Archive</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#objc_property_t_Archive_Codes"><span class="toc-number">3.1.1.</span> <span class="toc-text">objc_property_t Archive Codes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ivar_Archive_Codes"><span class="toc-number">3.1.2.</span> <span class="toc-text">Ivar Archive Codes</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Unarchive"><span class="toc-number">3.2.</span> <span class="toc-text">Unarchive</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#objc_property_t_Unarchive_Codes"><span class="toc-number">3.2.1.</span> <span class="toc-text">objc_property_t Unarchive Codes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ivar_Unarchive_Codes"><span class="toc-number">3.2.2.</span> <span class="toc-text">Ivar Unarchive Codes</span></a></li></ol></li></ol></li></ol>
 		</div>
 		
-		<p><strong>编写本博客相关环境：Mac OS EI Capitan 10.11.4，Mou 0.8.7，Xcode 7.3.1 (7D1014)，iOS 9.3.2</strong>    </p>
-<p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a>    </p>
-<p>工程项目下载请到<a href="https://github.com/DaBinGe/UniversalArchiveDemo" target="_blank" rel="external">Github下载地址</a>    </p>
-<h1 id="u7B80_u8981_u8BF4_u660E"><a href="#u7B80_u8981_u8BF4_u660E" class="headerlink" title="简要说明"></a>简要说明</h1><p>This demo describes two ways to archive or unarchive all of the NSObject objects and its<br>subclass objects.One way uses Ivar and another uses objc_property_t.<br>本例子通过objc/runtime，分别使用Ivar和objc_property_t两种方式，实现id对象类型的归解档。</p>
+		<h1 id="u7B80_u8981_u8BF4_u660E"><a href="#u7B80_u8981_u8BF4_u660E" class="headerlink" title="简要说明"></a>简要说明</h1><p>This demo describes two ways to archive or unarchive all of the NSObject objects and its<br>subclass objects.One way uses Ivar and another uses objc_property_t.<br>本例子通过objc/runtime，分别使用Ivar和objc_property_t两种方式，实现id对象类型的归解档。</p>
 <p>IDE:  Mac OS EI Capitan 10.11.4,Xcode 7.3.1 (7D1014)</p>
 <h1 id="u5B9E_u73B0_u539F_u7406"><a href="#u5B9E_u73B0_u539F_u7406" class="headerlink" title="实现原理"></a>实现原理</h1><p>Getting the object’s variable names by runtime,and getting variable value by Key-Value-Coding,<br>to encode or decode in loop.<br>通过运行时，循环取出当前对象的变量名，以及KVC通过变量名进行取值赋值，再通过得到的键和值进行归档解档。</p>
 <h1 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h1><p>相关的Objc运行时模块： @import ObjectiveC.runtime;<br>或头文件： #import <objc runtime.h="">    </objc></p>
@@ -176,7 +170,10 @@
     }
     return self;
 }
-</code></pre><p>Please look at the project files to know other details.<br>其它细节请查看工程的文件。</p>
+</code></pre><p>Please look at the project files from Github to know other details.<br>其它细节请查看Github工程文件。</p>
+<p><strong>编写本博客相关环境：Mac OS EI Capitan 10.11.4，Mou 0.8.7，Xcode 7.3.1 (7D1014)，iOS 9.3.2</strong>    </p>
+<p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a>    </p>
+<p><a href="https://github.com/DaBinGe/UniversalArchiveDemo" target="_blank" rel="external">Github工程项目下载地址</a>    </p>
   
 	</div>
 		<footer class="article-footer clearfix">
