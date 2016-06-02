@@ -9,9 +9,7 @@
     
     <meta name="author" content="大彬">
     
-    <meta name="description" content="编写本博客相关环境：Mac OS 10.11.3，Mou 0.8.7，Xcode 7.2 (7C68)，iOS 9.2
-欢迎大家关注小编的博客 大彬的博客
-SummaryThis is a introduction of caculating or limiting text word counts">
+    <meta name="description" content="SummaryThis is a introduction of caculating or limiting text word counts.The text is divided into DBC case charaters and SBC case charaters.本文介绍全角字符和忽">
     
     
     
@@ -80,7 +78,7 @@ SummaryThis is a introduction of caculating or limiting text word counts">
     </p>
   <p class="article-time">
     <time datetime="2016-03-18T01:24:01.000Z" itemprop="datePublished">2016-03-18</time>
-    更新日期:<time datetime="2016-03-18T06:43:12.000Z" itemprop="dateModified">2016-03-18</time>
+    更新日期:<time datetime="2016-06-02T01:36:08.000Z" itemprop="dateModified">2016-06-02</time>
     
   </p>
 </header>
@@ -92,9 +90,7 @@ SummaryThis is a introduction of caculating or limiting text word counts">
 		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Summary"><span class="toc-number">1.</span> <span class="toc-text">Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tip"><span class="toc-number">2.</span> <span class="toc-text">Tip</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DBC_case__28Half-width_29_characters"><span class="toc-number">3.</span> <span class="toc-text">DBC case (Half-width) characters</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SBC_case__28Full-width_29_charaters"><span class="toc-number">4.</span> <span class="toc-text">SBC case (Full-width) charaters</span></a></li></ol>
 		</div>
 		
-		<p><strong>编写本博客相关环境：Mac OS 10.11.3，Mou 0.8.7，Xcode 7.2 (7C68)，iOS 9.2</strong></p>
-<p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a></p>
-<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>This is a introduction of caculating or limiting text <strong>word counts</strong>.<br>The text is divided into <em>DBC case charaters</em> and <em>SBC case charaters</em>.<br>本文介绍<em>全角字符</em>和<em>忽略全角字符</em>的文本字数统计或限制。</p>
+		<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>This is a introduction of caculating or limiting text <strong>word counts</strong>.<br>The text is divided into <em>DBC case charaters</em> and <em>SBC case charaters</em>.<br>本文介绍<em>全角字符</em>和<em>忽略全角字符</em>的文本字数统计或限制。</p>
 <h1 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h1><ul>
 <li><p>Editting in UITextField,these codes should be use for the protocol method<br>“- (BOOL)textField:(UITextField <em>)textField shouldChangeCharactersInRange:<br>(NSRange)range replacementString:(NSString </em>)string”,while UITextView is<br>“- (BOOL)textView:(UITextView <em>)textView shouldChangeTextInRange:(NSRange)range<br>replacementText:(NSString </em>)text”.    </p>
 </li>
@@ -169,7 +165,9 @@ SummaryThis is a introduction of caculating or limiting text word counts">
     return nResult;
 }
 </code></pre><p>The limit word count codes above compatible with users’ <strong>paste</strong> action.<br>以上限制字数代码在用户粘贴时也有效。</p>
+<p><strong>编写本博客相关环境：Mac OS 10.11.3，Mou 0.8.7，Xcode 7.2 (7C68)，iOS 9.2</strong></p>
 <p>转自大彬的 <a href="http://dabinge.github.io/2016/03/18/iOS%E5%BC%80%E5%8F%91-%E8%BE%93%E5%85%A5%E5%AD%97%E6%95%B0%E8%AE%A1%E7%AE%97%E3%80%81%E9%99%90%E5%88%B6/" target="_blank" rel="external">iOS开发 输入字数计算、限制</a></p>
+<p>欢迎大家关注小编的博客 <a href="http://dabinge.github.io/" target="_blank" rel="external">大彬的博客</a></p>
   
 	</div>
 		<footer class="article-footer clearfix">
