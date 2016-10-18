@@ -4,7 +4,7 @@
   <subtitle><![CDATA[做什么都一样，用心去做都可以做好。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-18T09:14:04.000Z</updated>
+  <updated>2016-10-18T09:16:27.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2016/10/17/H5%E5%85%A5%E9%97%A8%E4%B9%8B%E8%B7%AF/"/>
     <id>http://yoursite.com/2016/10/17/H5入门之路/</id>
     <published>2016-10-17T04:00:46.000Z</published>
-    <updated>2016-10-18T09:14:04.000Z</updated>
+    <updated>2016-10-18T09:16:27.000Z</updated>
     <content type="html"><![CDATA[<h1 id="u6982_u8981"><a href="#u6982_u8981" class="headerlink" title="概要"></a>概要</h1><p>本文主要总结小编4个月以来入门学习HTML开发的过程总结和心得体会。部分体会带有较重的<br>个人感情色彩，毕竟是写主观内容，望读者平视之。<br><br></p>
 <h1 id="u4ECE_u5F00_u59CB_u5B66_u4E60_u5230_u53D1_u5E03_u7B2C_u4E00_u4E2AH5_u9879_u76EE"><a href="#u4ECE_u5F00_u59CB_u5B66_u4E60_u5230_u53D1_u5E03_u7B2C_u4E00_u4E2AH5_u9879_u76EE" class="headerlink" title="从开始学习到发布第一个H5项目"></a>从开始学习到发布第一个H5项目</h1><p>小编入行iOS开发2年有余，整个过程下来，对学习软件编程的套路有了深刻的理解和感受，<br>为验证这一学习方法的可行性，小编决定拿一门开发语言来实践检验。鉴于行情里h5正是开<br>始发热阶段，开发难度低些，所以就选它了，即使对前端开发者来说，学了后端开发会更完<br>美。<br>并不是web前端，但是也适配PC(个人电脑person computer)端</p>
 <h2 id="u5F00_u5199_u524D_u8C03_u7814"><a href="#u5F00_u5199_u524D_u8C03_u7814" class="headerlink" title="开写前调研"></a>开写前调研</h2><p>每次做重大决定前，都会对所选方向的可能困难、麻烦进行评估，并大概想想如何处理相关困<br>难，这样能更好做到持久作战，不容易放弃。<br>所以我先对HTML5各方面作个了解，比如原始定义、行情、技术难度、市场动态、最麻烦或者<br>最难点、要学什么、学习资源等。并把重要信息记录下来，一开始就记录到一个归类里，后面<br>再添加和修改。<br>能搜索到这篇博客，说明你已经有这个意识了。</p>
@@ -33,7 +33,8 @@
 <h4 id="u79FB_u52A8_u7AEF"><a href="#u79FB_u52A8_u7AEF" class="headerlink" title="移动端"></a>移动端</h4><p>调试移动端的网页，分为模拟器调试和真机调试。     </p>
 <h5 id="u6A21_u62DF_u5668"><a href="#u6A21_u62DF_u5668" class="headerlink" title="模拟器"></a>模拟器</h5><p>模拟器调试途径比较多，小编在这里大概罗列一下：各浏览器查看元素里选移动设备、安卓模<br>拟器、iOS模拟器等。小编觉得用模拟器软件的时候电脑太卡了，所以选择浏览器带的模拟<br>器，谷歌浏览器的模拟器设计得比较方便操作，界面好，所以小编主要用它调试。打开方法：<br>右键网页-&gt;检查-&gt;Toggle device mode。<br>断点调试JavaScript代码：浏览器窗口拉开足够宽（一般的电脑最大化就可以），找到<br>Toggel device mode右边的第三个Sources，选择左边第一个小窗口的一个网页文件，中<br>间是代码窗口，再过来就是debugger窗口。代码窗口里，左边一列是行数，点击那些数字会<br>添加或者取消断点。    </p>
 <h5 id="u771F_u673A_u8C03_u8BD5"><a href="#u771F_u673A_u8C03_u8BD5" class="headerlink" title="真机调试"></a>真机调试</h5><p>windows可以通过设置iis实现局域网真机调试，而小编用的是Mac OS，故选择的是<br><a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html/" target="_blank" rel="external">weirne</a>工具。官网里有安装和运行流程，但是有个细节没有说明，导致小编研究了<br>很久才使用成功，下面将补上这个细节：<br>运行weinre服务之前，应该把源码放到/usr/local/lib/node_modules/weinre/web<br>下，然后再运行weinre服务，如$ weinre –boundHost 192.168.1.123 –httpPort 8888。<br>手机浏览器打开<a href="http://192.168.1.123:8888/fileName.html，fileName就是你要" target="_blank" rel="external">http://192.168.1.123:8888/fileName.html，fileName就是你要</a><br>运行看效果的html源码文件。有文件夹的话，按web目录下拼接后面部分即可，如：<br><a href="http://192.168.1.123:8888/projects/helloworld/helloworld.html。如想在" target="_blank" rel="external">http://192.168.1.123:8888/projects/helloworld/helloworld.html。如想在</a><br>其他app内看效果，粘贴这个链接并打开即可。</p>
-<h3 id="u770B_u6559_u5B66_u89C6_u9891"><a href="#u770B_u6559_u5B66_u89C6_u9891" class="headerlink" title="看教学视频"></a>看教学视频</h3><p>学完了基础，再看教学视频可以快很多，小编往往是2倍速度的播放。这个时候查漏补缺效率<br>比较高，要是看视频而不是看书的话，经常要后退播放，或者直接看源码，都不适合小编，读<br>者可根据个人情况作选择。</p>
+<h2 id="u770B_u6559_u5B66_u89C6_u9891"><a href="#u770B_u6559_u5B66_u89C6_u9891" class="headerlink" title="看教学视频"></a>看教学视频</h2><p>学完了基础，再看教学视频可以快很多，小编往往是2倍速度的播放。这个时候查漏补缺效率<br>比较高，要是看视频而不是看书的话，经常要后退播放，或者直接看源码，都不适合小编，读<br>者可根据个人情况作选择。    </p>
+<p>内容较多，当前为效果预览。</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h1 id="u6982_u8981"><a href="#u6982_u8981" class="headerlink" title="概要"></a>概要</h1><p>本文主要总结小编4个月以来入门学习HTML开发的过程总结和心得体会。部分体会带有较重的<br>个人感情色]]>
