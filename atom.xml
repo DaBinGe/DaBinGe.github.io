@@ -4,7 +4,7 @@
   <subtitle><![CDATA[做什么都一样，用心去做都可以做好。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-02T01:42:40.000Z</updated>
+  <updated>2016-10-18T09:14:04.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[H5入门之路]]></title>
+    <link href="http://yoursite.com/2016/10/17/H5%E5%85%A5%E9%97%A8%E4%B9%8B%E8%B7%AF/"/>
+    <id>http://yoursite.com/2016/10/17/H5入门之路/</id>
+    <published>2016-10-17T04:00:46.000Z</published>
+    <updated>2016-10-18T09:14:04.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="u6982_u8981"><a href="#u6982_u8981" class="headerlink" title="概要"></a>概要</h1><p>本文主要总结小编4个月以来入门学习HTML开发的过程总结和心得体会。部分体会带有较重的<br>个人感情色彩，毕竟是写主观内容，望读者平视之。<br><br></p>
+<h1 id="u4ECE_u5F00_u59CB_u5B66_u4E60_u5230_u53D1_u5E03_u7B2C_u4E00_u4E2AH5_u9879_u76EE"><a href="#u4ECE_u5F00_u59CB_u5B66_u4E60_u5230_u53D1_u5E03_u7B2C_u4E00_u4E2AH5_u9879_u76EE" class="headerlink" title="从开始学习到发布第一个H5项目"></a>从开始学习到发布第一个H5项目</h1><p>小编入行iOS开发2年有余，整个过程下来，对学习软件编程的套路有了深刻的理解和感受，<br>为验证这一学习方法的可行性，小编决定拿一门开发语言来实践检验。鉴于行情里h5正是开<br>始发热阶段，开发难度低些，所以就选它了，即使对前端开发者来说，学了后端开发会更完<br>美。<br>并不是web前端，但是也适配PC(个人电脑person computer)端</p>
+<h2 id="u5F00_u5199_u524D_u8C03_u7814"><a href="#u5F00_u5199_u524D_u8C03_u7814" class="headerlink" title="开写前调研"></a>开写前调研</h2><p>每次做重大决定前，都会对所选方向的可能困难、麻烦进行评估，并大概想想如何处理相关困<br>难，这样能更好做到持久作战，不容易放弃。<br>所以我先对HTML5各方面作个了解，比如原始定义、行情、技术难度、市场动态、最麻烦或者<br>最难点、要学什么、学习资源等。并把重要信息记录下来，一开始就记录到一个归类里，后面<br>再添加和修改。<br>能搜索到这篇博客，说明你已经有这个意识了。</p>
+<h2 id="u83B7_u53D6_u5B66_u4E60_u8D44_u6E90"><a href="#u83B7_u53D6_u5B66_u4E60_u8D44_u6E90" class="headerlink" title="获取学习资源"></a>获取学习资源</h2><p>从获取学习资源开始，你就正式开始进入学习阶段了。这个阶段，你应该搜索到很多提高路径<br>和学习资源了。<br>首先肯定是HTML、CSS、JavaScript语法学习。<a href="https://www.w3.org/" target="_blank" rel="external">W3C标准</a>、<a href="https://www.w3.org/html/ig/zh/wiki/HTML5" target="_blank" rel="external">H5中国</a>、<br><a href="http://html5index.org/" target="_blank" rel="external">H5 JS API</a>、<a href="http://www.runoob.com/" target="_blank" rel="external">菜鸟教程</a>等。<br>想要系统地学习相关知识，通过书籍是很好的方法。<a href="https://detail.tmall.com/item.htm?id=44122968788&amp;ut_sk=1.VSfRdD28yQcDAM543N1LbAic_21380790_1476693328853.Copy.1&amp;sourceType=item&amp;price=54.4&amp;suid=D63FAB89-1AC5-4E98-A7E6-4C39B85E9DB9&amp;un=57a2d48487b3e317132b0f6991806569&amp;share_crt_v=1&amp;cpp=1&amp;shareurl=true&amp;spm=a313p.22.22t.13228862898&amp;short_name=h.bX11vn&amp;cv=AAOuvfKh&amp;sm=6a4707&amp;app=firefox" target="_blank" rel="external">HTML5+CSS3+JavaScript网页设计案例课堂</a>、<br><a href="https://detail.tmall.com/item.htm?id=25395312752&amp;ut_sk=1.VSfRdD28yQcDAM543N1LbAic_21380790_1476693328853.Copy.1&amp;sourceType=item&amp;price=26&amp;origin_price=33.7&amp;suid=32CDC0FF-5A30-4124-9EA3-DEF4867C36EE&amp;un=57a2d48487b3e317132b0f6991806569&amp;share_crt_v=1&amp;cpp=1&amp;shareurl=true&amp;spm=a313p.22.1dk.13229381646&amp;short_name=h.bX1nf1&amp;cv=AAOuzDGm&amp;sm=31a3cd&amp;app=firefox" target="_blank" rel="external">HTML5移动Web开发实战</a>、<a href="https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.11.gwHB6H&amp;id=527669964743&amp;areaId=440100&amp;user_id=2072556143&amp;cat_id=2&amp;is_b=1&amp;rn=5ce63008bb12620b52e1c39f462327fa" target="_blank" rel="external">JavaScript高级程序设计</a>。<br>观看教学视频能快速学习新技术。它不像看书需要良好的状态，也不像技术文档那么多文字图<br>片，通过讲师的语言就能很快很明白的让你批量学到技术点。即使毫无基础，第一次看视频收<br>获也很大。<br>小编首先过了一遍HTML，CSS，JavaScript的基础视频。后面快要做项目了，才看项目实<br>战视频。在视频里有很多技术和开发技巧是其他资源学不到的。</p>
+<h2 id="u5F00_u59CB_u5199_u4EE3_u7801"><a href="#u5F00_u59CB_u5199_u4EE3_u7801" class="headerlink" title="开始写代码"></a>开始写代码</h2><p>主动敲代码是最关键的一步。只有真正去调试代码，才能理解和记忆各个代码的效果、细节和区别。</p>
+<h3 id="u5B89_u88C5IDE"><a href="#u5B89_u88C5IDE" class="headerlink" title="安装IDE"></a>安装IDE</h3><p>工具的重要性就不多说了，没有哪个正常人会徒手砍大树，所以会安装、使用和设置IDE（集<br>成开发环境，Integrated Development Environment）是程序员的必备技能之一。以<br>下介绍几个主流HTML编辑器：<br><a href="http://www.sublimetext.com/" target="_blank" rel="external">Sublime Text</a><br><a href="http://www.adobe.com/cn/products/cs6/dreamweaver.html/" target="_blank" rel="external">Dreamwave</a><br><a href="http://www.jetbrains.com/webstorm/" target="_blank" rel="external">Webstorm</a><br>当然，意识好的话，你也许会先去百度百科之类的网页了解它们，或者搜索“<a href="https://www.baidu.com/s?wd=%E5%A5%BD%E7%94%A8%E7%9A%84HTML%E7%BC%96%E8%BE%91%E5%99%A8&amp;rsv_spt=1&amp;rsv_iqid=0xf77e3db3000014ef&amp;issp=1&amp;f=8&amp;rsv_bp=1&amp;rsv_idx=2&amp;ie=utf-8&amp;rqlang=cn&amp;tn=baiduhome_pg&amp;rsv_enter=1&amp;inputT=526&amp;rsv_t=bccbhnlNodVuWtPtPe9SBKst6HUQLs4DIEV68B2m22nL4j1ZR%2FDgZFAPgBRGuj1Hi4OV&amp;oq=windows%E7%B3%BB%E7%BB%9Fbaike&amp;rsv_pq=8f2f4ac70001879f&amp;rsv_sug3=34&amp;rsv_sug1=20&amp;rsv_sug7=100&amp;rsv_sug2=0&amp;rsv_sug4=1362&amp;rsv_sug=1/" target="_blank" rel="external">好用的HTML编辑器</a>”，<br>查阅了足够资料再下手。<br>破解相关的就不再多说了，<a href="http://baike.baidu.com/view/46646.htm?fromtitle=windows&amp;fromid=165458&amp;type=search/" target="_blank" rel="external">Windows</a>和<a href="http://baike.baidu.com/view/157344.htm/" target="_blank" rel="external">Mac OS</a>都已有教程，按照文档说明操<br>作就可以。开发之路很多实现都要根据文档来解决的，这是迟早要精通的技能。</p>
+<h3 id="u6309_u7167_u4E66_u672C_u6572_u4EE3_u7801"><a href="#u6309_u7167_u4E66_u672C_u6572_u4EE3_u7801" class="headerlink" title="按照书本敲代码"></a>按照书本敲代码</h3><p>书本会从基础慢慢介绍各种标签，按照上面的内容调试出基本的效果。当然，书上的内容那么<br>少，不可能局限于里面的知识，书，应该被当成为引导。<br>所以，你得要各个细节都自己查阅资料，详细学习那些知识点。<br>一开始，遇到doctype,html,head,body等，都去百度或者谷歌搜索相关的技术博客，遇<br>到什么其他新内容也去调研。这样的话，往往查一个小知识却会花费很多时间，阅读大量的文<br>档。这个过程的沉淀是非常重要的，你不但可以详细了解这个模块的技术，还能学到相关的其<br>他要点。<br>像常见属性值的各种效果，很多技术博客都是图文说明，看了之后方便理解和记忆，自己调试<br>也很快得到效果。<br>整个过程就是学习HTML标签的设置，CSS的布局控制和JavaScript的交互和数据处理。</p>
+<h3 id="u7F16_u7801_u89C4_u8303"><a href="#u7F16_u7801_u89C4_u8303" class="headerlink" title="编码规范"></a>编码规范</h3><p>不管哪门开发语言，都有编码规范。所以养成良好的习惯是必要的，特别是开始的时候就注意<br>着方面，否则以后要改掉坏习惯就难多了。<br>开始写的时候，你就应该经常去查看相关的<a href="http://codeguide.bootcss.com/" target="_blank" rel="external">编码规范</a>。说是相关的，因为HTML，CSS<br>和JavaScript的编码规范是不一样的。即使发布前要<a href="https://github.com/mishoo/UglifyJS/" target="_blank" rel="external">压缩代码</a>，但是压缩前的代码<br>还是要根据规范来写，免得坑了日后的自己或者别人。</p>
+<h3 id="u8C03_u8BD5_u4EE3_u7801"><a href="#u8C03_u8BD5_u4EE3_u7801" class="headerlink" title="调试代码"></a>调试代码</h3><p>写代码的过程也会包含调试代码的操作，小模块很快写完来调试，但是内容多的时候，往往是<br>写一个效果或者改动一处代码会马上查看结果，特别是要适配那么多的浏览器、版本和设备尺<br>寸。    </p>
+<h4 id="PC_u7AEF"><a href="#PC_u7AEF" class="headerlink" title="PC端"></a>PC端</h4><p>直接用浏览器打开html文件或者保存代码后刷新已打开的html网页。</p>
+<h4 id="u79FB_u52A8_u7AEF"><a href="#u79FB_u52A8_u7AEF" class="headerlink" title="移动端"></a>移动端</h4><p>调试移动端的网页，分为模拟器调试和真机调试。     </p>
+<h5 id="u6A21_u62DF_u5668"><a href="#u6A21_u62DF_u5668" class="headerlink" title="模拟器"></a>模拟器</h5><p>模拟器调试途径比较多，小编在这里大概罗列一下：各浏览器查看元素里选移动设备、安卓模<br>拟器、iOS模拟器等。小编觉得用模拟器软件的时候电脑太卡了，所以选择浏览器带的模拟<br>器，谷歌浏览器的模拟器设计得比较方便操作，界面好，所以小编主要用它调试。打开方法：<br>右键网页-&gt;检查-&gt;Toggle device mode。<br>断点调试JavaScript代码：浏览器窗口拉开足够宽（一般的电脑最大化就可以），找到<br>Toggel device mode右边的第三个Sources，选择左边第一个小窗口的一个网页文件，中<br>间是代码窗口，再过来就是debugger窗口。代码窗口里，左边一列是行数，点击那些数字会<br>添加或者取消断点。    </p>
+<h5 id="u771F_u673A_u8C03_u8BD5"><a href="#u771F_u673A_u8C03_u8BD5" class="headerlink" title="真机调试"></a>真机调试</h5><p>windows可以通过设置iis实现局域网真机调试，而小编用的是Mac OS，故选择的是<br><a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html/" target="_blank" rel="external">weirne</a>工具。官网里有安装和运行流程，但是有个细节没有说明，导致小编研究了<br>很久才使用成功，下面将补上这个细节：<br>运行weinre服务之前，应该把源码放到/usr/local/lib/node_modules/weinre/web<br>下，然后再运行weinre服务，如$ weinre –boundHost 192.168.1.123 –httpPort 8888。<br>手机浏览器打开<a href="http://192.168.1.123:8888/fileName.html，fileName就是你要" target="_blank" rel="external">http://192.168.1.123:8888/fileName.html，fileName就是你要</a><br>运行看效果的html源码文件。有文件夹的话，按web目录下拼接后面部分即可，如：<br><a href="http://192.168.1.123:8888/projects/helloworld/helloworld.html。如想在" target="_blank" rel="external">http://192.168.1.123:8888/projects/helloworld/helloworld.html。如想在</a><br>其他app内看效果，粘贴这个链接并打开即可。</p>
+<h3 id="u770B_u6559_u5B66_u89C6_u9891"><a href="#u770B_u6559_u5B66_u89C6_u9891" class="headerlink" title="看教学视频"></a>看教学视频</h3><p>学完了基础，再看教学视频可以快很多，小编往往是2倍速度的播放。这个时候查漏补缺效率<br>比较高，要是看视频而不是看书的话，经常要后退播放，或者直接看源码，都不适合小编，读<br>者可根据个人情况作选择。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="u6982_u8981"><a href="#u6982_u8981" class="headerlink" title="概要"></a>概要</h1><p>本文主要总结小编4个月以来入门学习HTML开发的过程总结和心得体会。部分体会带有较重的<br>个人感情色]]>
+    </summary>
+    
+      <category term="HTML开发" scheme="http://yoursite.com/tags/HTML%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://yoursite.com/2016/10/17/hello-world/"/>
+    <id>http://yoursite.com/2016/10/17/hello-world/</id>
+    <published>2016-10-17T03:55:44.000Z</published>
+    <updated>2016-02-25T10:13:48.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="u5982_u679C_uFF0C_u4F60_u62B1_u6028_u73B0_u5728_u7684_u751F_u6D3B_u8FD9_u4E48_u8270_u8F9B_uFF01_u90A3_u4E48_uFF0C_u51E0_u5341_u5E74_u524D_u7684_u90A3_u573A_u6E38_u6CF3_u6BD4_u8D5B_uFF0C_u4F60_u5C31_u4E0D_u8BE5_u62FF_u7B2C_u4E00_uFF01"><a href="#u5982_u679C_uFF0C_u4F60_u62B1_u6028_u73B0_u5728_u7684_u751F_u6D3B_u8FD9_u4E48_u8270_u8F9B_uFF01_u90A3_u4E48_uFF0C_u51E0_u5341_u5E74_u524D_u7684_u90A3_u573A_u6E38_u6CF3_u6BD4_u8D5B_uFF0C_u4F60_u5C31_u4E0D_u8BE5_u62FF_u7B2C_u4E00_uFF01" class="headerlink" title="如果，你抱怨现在的生活这么艰辛！那么，几十年前的那场游泳比赛，你就不该拿第一！"></a>如果，你抱怨现在的生活这么艰辛！那么，几十年前的那场游泳比赛，你就不该拿第一！</h2>]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="u5982_u679C_uFF0C_u4F60_u62B1_u6028_u73B0_u5728_u7684_u751F_u6D3B_u8FD9_u4E48_u8270_u8F9B_uFF01_u90A3_u4E48_uFF0C_u51E0_u5341_u5E74_]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Ivar和objc_property_t方式对自定义模型进行归解档]]></title>
@@ -923,19 +965,6 @@ $ vim _config.yml
     </summary>
     
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://yoursite.com/2016/02/25/hello-world/"/>
-    <id>http://yoursite.com/2016/02/25/hello-world/</id>
-    <published>2016-02-25T10:13:48.000Z</published>
-    <updated>2016-02-25T10:13:48.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="u5982_u679C_uFF0C_u4F60_u62B1_u6028_u73B0_u5728_u7684_u751F_u6D3B_u8FD9_u4E48_u8270_u8F9B_uFF01_u90A3_u4E48_uFF0C_u51E0_u5341_u5E74_u524D_u7684_u90A3_u573A_u6E38_u6CF3_u6BD4_u8D5B_uFF0C_u4F60_u5C31_u4E0D_u8BE5_u62FF_u7B2C_u4E00_uFF01"><a href="#u5982_u679C_uFF0C_u4F60_u62B1_u6028_u73B0_u5728_u7684_u751F_u6D3B_u8FD9_u4E48_u8270_u8F9B_uFF01_u90A3_u4E48_uFF0C_u51E0_u5341_u5E74_u524D_u7684_u90A3_u573A_u6E38_u6CF3_u6BD4_u8D5B_uFF0C_u4F60_u5C31_u4E0D_u8BE5_u62FF_u7B2C_u4E00_uFF01" class="headerlink" title="如果，你抱怨现在的生活这么艰辛！那么，几十年前的那场游泳比赛，你就不该拿第一！"></a>如果，你抱怨现在的生活这么艰辛！那么，几十年前的那场游泳比赛，你就不该拿第一！</h2>]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="u5982_u679C_uFF0C_u4F60_u62B1_u6028_u73B0_u5728_u7684_u751F_u6D3B_u8FD9_u4E48_u8270_u8F9B_uFF01_u90A3_u4E48_uFF0C_u51E0_u5341_u5E74_]]>
-    </summary>
     
   </entry>
   
