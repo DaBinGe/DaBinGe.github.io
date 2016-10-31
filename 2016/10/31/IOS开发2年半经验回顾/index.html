@@ -1,0 +1,355 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>IOS开发2年半经验回顾 | 大彬</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="大彬">
+    
+    <meta name="description" content="前言本文主要是为进阶新层次而总结开发30个月以来的学习成果。为尽可能多地覆盖广度和深度，分别从几个大方面描述相关内容。
+过程概述objCiOS开发所用的语言Objective-C是新兴的一门开发语言，大学并没有开设相关课程。但是，oc是从c语言衍生过来了，有很多c语言的特征，也有高级语言和面向对象语">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/yaht.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/yaht.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="大彬" title="大彬"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="大彬">大彬</a></h1>
+				<h2 class="blog-motto">做什么都一样，用心去做都可以做好。</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="我的书屋">我的书屋</a></li>
+					
+						<li><a href="关于">关于</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/10/31/IOS开发2年半经验回顾/" title="IOS开发2年半经验回顾" itemprop="url">IOS开发2年半经验回顾</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://yoursite.com" title="大彬">大彬</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2016-10-31T09:37:42.000Z" itemprop="datePublished">2016-10-31</time>
+    更新日期:<time datetime="2016-10-31T10:14:51.000Z" itemprop="dateModified">2016-10-31</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u524D_u8A00"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u8FC7_u7A0B_u6982_u8FF0"><span class="toc-number">2.</span> <span class="toc-text">过程概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#objC"><span class="toc-number">2.1.</span> <span class="toc-text">objC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BED_u6CD5_u5165_u95E8"><span class="toc-number">2.2.</span> <span class="toc-text">语法入门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UI_u5165_u95E8"><span class="toc-number">2.3.</span> <span class="toc-text">UI入门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7B2C_u4E00_u4EFD_u5DE5_u4F5C"><span class="toc-number">2.4.</span> <span class="toc-text">第一份工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7B2C_u4E8C_u4EFD_u5DE5_u4F5C"><span class="toc-number">2.5.</span> <span class="toc-text">第二份工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7B2C_u4E09_u4EFD_u5DE5_u4F5C_uFF08_u5F53_u524D_uFF09"><span class="toc-number">2.6.</span> <span class="toc-text">第三份工作（当前）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u5404_u6A21_u5757_u6280_u672F"><span class="toc-number">3.</span> <span class="toc-text">各模块技术</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u5404_u9879_u76EE_u56DE_u987E"><span class="toc-number">4.</span> <span class="toc-text">各项目回顾</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u4F18_u79C0_u7B2C_u4E09_u65B9SDK_u539F_u7406_u63A2_u7A76"><span class="toc-number">5.</span> <span class="toc-text">优秀第三方SDK原理探究</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u9AD8_u7EA7_u5F00_u53D1"><span class="toc-number">6.</span> <span class="toc-text">高级开发</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u6280_u672F_u74F6_u9876_u9650_u5236"><span class="toc-number">7.</span> <span class="toc-text">技术瓶顶限制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u5BF9iOS_u5F00_u53D1_u7684_u770B_u6CD5"><span class="toc-number">8.</span> <span class="toc-text">对iOS开发的看法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u5BF9_u8F6F_u4EF6_u5F00_u53D1_u5DE5_u7A0B_u5E08_u7684_u7406_u89E3"><span class="toc-number">9.</span> <span class="toc-text">对软件开发工程师的理解</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u7F16_u7A0B_u601D_u60F3"><span class="toc-number">10.</span> <span class="toc-text">编程思想</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u7ED3_u8BED"><span class="toc-number">11.</span> <span class="toc-text">结语</span></a></li></ol>
+		</div>
+		
+		<h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>本文主要是为进阶新层次而总结开发30个月以来的学习成果。为尽可能多地覆盖广度和深度，分别从几个大方面描述相关内容。</p>
+<h1 id="u8FC7_u7A0B_u6982_u8FF0"><a href="#u8FC7_u7A0B_u6982_u8FF0" class="headerlink" title="过程概述"></a>过程概述</h1><h2 id="objC"><a href="#objC" class="headerlink" title="objC"></a>objC</h2><p>iOS开发所用的语言Objective-C是新兴的一门开发语言，大学并没有开设相关课程。但是，oc是从c语言衍生过来了，有很多c语言的特征，也有高级语言和面向对象语言的特征，电子和计算机专业相关的人学起来都比较容易上手。</p>
+<h2 id="u8BED_u6CD5_u5165_u95E8"><a href="#u8BED_u6CD5_u5165_u95E8" class="headerlink" title="语法入门"></a>语法入门</h2><p>小编是从0开始学iOS开发的，2014年4月13日开始写下第一行iOS开发的代码。那时还没毕业，就出来培训iOS开发，觉得系统地学下基础来入门会更好，避免留下坏的编程习惯。<br>语法学习。各门语言都一样，一开始必须学习语法知识，才能看得懂、写得出代码。oc的语法，主要是函数调用和消息机制和c语言有差别，数据处理方面基本没变。<br>编程最难最痛苦的莫过于处理数据了。学习的数据类型及其转换、赋值、对比判断，选择分支和循环等等，都是用来处理数据的。<br>函数的格式换了一种，让函数更长更易读。<br>使用开发工具的能力一直在提升，那时只会用Xcode，Mac OS的基本使用也摸索得差不多，安装和破解个软件没什么压力。</p>
+<h2 id="UI_u5165_u95E8"><a href="#UI_u5165_u95E8" class="headerlink" title="UI入门"></a>UI入门</h2><p>纯代码写各种UIView及其子类控件。一开始觉得难度大，但是写到后面发现很多共性，学会看接口和文档后，写新控件已经没什么压力。学UI的时候还学了手势和响应者链，了解苹果手机的一些系统实现机制。<br>学习了基础就是项目期，开始做项目。那时觉得学了很多技术了，做项目才知道很多知识用不到，该会的却没学。然后就是通过网上大量的技术博客恶补了。</p>
+<h2 id="u7B2C_u4E00_u4EFD_u5DE5_u4F5C"><a href="#u7B2C_u4E00_u4EFD_u5DE5_u4F5C" class="headerlink" title="第一份工作"></a>第一份工作</h2><p>做完项目就去找工作了，也许是小编基础比较扎实，技术总结归纳得好，一找就得到了工作。而且更幸运的是，我所做的项—-<strong>追追</strong>，是个完整的大项目，有大神之前已经写好很多代码了。<br>曾经我怀疑过他们的一些设计方式，也否定了部分代码细节，但是后来技术提升了才发现他们是对的，相关开发书籍就说了具体的利与弊。<br>开发追追的那段时间，我学会了很多技术，主要是UI开发和框架设计，即时聊天和发布APP还没着手。也是那时候开始学会封装接口，处理复杂的业务逻辑的。很怀念，因为只有那个时候老主管带过我，愿意教我技术。</p>
+<h2 id="u7B2C_u4E8C_u4EFD_u5DE5_u4F5C"><a href="#u7B2C_u4E8C_u4EFD_u5DE5_u4F5C" class="headerlink" title="第二份工作"></a>第二份工作</h2><p>公司拖欠工资对应届毕业生来说压力太大了，小编无奈之下找了另一份工作，即使那个项目还有很多技术没学，比如第三方SDK和第三方开放平台的引入，XMPP聊天，App Store发布及迭代和MVC深入应用等。<br>这次做的是个健康医疗的APP—-<strong>景医卫</strong>，除了语音视频实时聊天，其它功能外包做。哎，外包的代码小编就不吐槽了，已没力气。所以那时主要是研究引入的VOIP框架，用来实现音视频聊天的，学习它的多媒体编解码。那是个别人写的代码，有c,c++混合实现，小编封装了oc的接口，然后完成语音视频聊天的界面和逻辑。<br>后来外包项目拿回来，合并音视频聊天进去后，才深深地体会到外包代码没有重用、难维护。重新梳理了工程之后就和后台对接，小编连哪里调用哪个接口都不知道，终于知道为何招聘要求协调合作能力了，自己抓包接口还要猜字段显示的日子真难过，接口有问题服务端人员还好几天才反馈。<br>后端开发人员能力不足，很多工作得要前端完成。后来后端的人离职之后留下个新手更痛苦，导致我上班没1年就离职了。这就是小编后来离职的根本原因。只怪自己当初面试经验不足，面试时没问清楚。<br>后来换了座位，天天被附近的领导发二手烟熏。我们的工作是高强度大脑消耗，被熏的时候头疼得厉害，提出抗议无效一个多月之后终于忍不住就离职了。<br>期间的放假时间还帮朋友完成了个晒面试的APP，大大地提高了搭框架的能力。<br>总体来说，这段时间学习了第一个项目没学习的内容。</p>
+<h2 id="u7B2C_u4E09_u4EFD_u5DE5_u4F5C_uFF08_u5F53_u524D_uFF09"><a href="#u7B2C_u4E09_u4EFD_u5DE5_u4F5C_uFF08_u5F53_u524D_uFF09" class="headerlink" title="第三份工作（当前）"></a>第三份工作（当前）</h2><p>这份工作到现在已经有19个月了。由于产品的更改频繁，总监要求高，在这个创业公司里，小编的实力突飞猛进，在此工作1年就感觉技术到达了瓶顶。一天天的加班，一版版的迭代，一次次的优化，小编在开发的<strong>哒哒运动</strong>项目里实现了各种炫丽的UI效果，处理过量大而结构复杂的数据。<br>最难的要数跑步画轨迹的功能了，逻辑多，计算麻烦，而且还要室外调试各种情况。LBS的功能很多都用得滚瓜烂熟了，包括地位、搜索和导航3大地图模块。<br>由于2.0版本前都是我主导整个项目，所以学习了全面的开发技术。以前没接触过的TestFlight测试、证书管理、线上崩溃追踪和性能调试等等都得到了很好的突破。小编是个好学的人，期间看了很多iOS开发书籍，印证了第一个项目的多处优秀代码。<br>由于公司业务的改变，所做的功能已经对技术提高不大，近半年来主要学习HTML开发。公司业务量并不大，小编同时开发H5和iOS都还比较轻松。那么接下来说说我在这次工作都实现了哪些功能吧。    </p>
+<ul>
+<li>搭建框架、优化框架，目录结构、工程设置、封装接口、封装基类等</li>
+<li>编写开发计划文档、项目文档、SVN使用文档等</li>
+<li>图片相关处理，获取、编辑、多图上传、加载、轮播、放大、裁剪、玻化滤镜、截屏、拼图等</li>
+<li>各种各样的列表，瀑布流、用户图文动态、单级评论、盖楼评论、好友通讯录、类彩票中奖等</li>
+<li>自定义各种弹窗，类系统警告框、actionSheet、加载动画等</li>
+<li>地图功能，定位、经纬度编解码、POI搜索、导航、多样化标注、自定义覆盖物、实时天气等</li>
+<li>手机系统功能，相册相机、麦克风、定位、通讯录、短信、健康数据、陀悬仪、通知、打电话、日历等</li>
+<li>用户编辑、发布功能，图文动态发布、资料修改、创建类似活动的发布</li>
+<li>即时聊天，长连接、XML CoreData 自定义类型 基本数据类型的数据转换、数据增删改查、消息中心、聊天键盘、聊天界面分页加载复制删除等功能</li>
+<li>发布app，开发者账户管理、开发和发布证书及配置文件的管理、真机测试设备管理、app发布信息编辑、上传及TestFlight测试、处理各种提审及复审问题等</li>
+<li>第三方SDK，AFNetworking SDWebImage MWPhotoBrowser AGImagePickerController JSONKit XMPPFramework MJRefresh FMDB MBProgressHUD OpenShare等</li>
+<li>第三方开放平台，腾讯（登录分享）、微信（登录分享支付）、支付宝、新浪微博（登录分享）、友盟（统计、客服留言板）、个推、高德地图、“科大讯飞、环信（差点引入）”</li>
+<li>性能，后台模式（定位、语音）、数据库快速写入、多个异步线程网络请求、UI渲染、内存泄漏优化等</li>
+<li>音视频，录制、本地及网络播放、上传、下载、视频转码、视频缩略图等</li>
+<li>数据库，CoreData、FMDB<br>阅读了千千万万的文档之后，做好以上功能已经没有压力了。但是由于APP的用户量不高，更精细的功能还有待进一步提高。</li>
+</ul>
+<h1 id="u5404_u6A21_u5757_u6280_u672F"><a href="#u5404_u6A21_u5757_u6280_u672F" class="headerlink" title="各模块技术"></a>各模块技术</h1><h1 id="u5404_u9879_u76EE_u56DE_u987E"><a href="#u5404_u9879_u76EE_u56DE_u987E" class="headerlink" title="各项目回顾"></a>各项目回顾</h1><h1 id="u4F18_u79C0_u7B2C_u4E09_u65B9SDK_u539F_u7406_u63A2_u7A76"><a href="#u4F18_u79C0_u7B2C_u4E09_u65B9SDK_u539F_u7406_u63A2_u7A76" class="headerlink" title="优秀第三方SDK原理探究"></a>优秀第三方SDK原理探究</h1><h1 id="u9AD8_u7EA7_u5F00_u53D1"><a href="#u9AD8_u7EA7_u5F00_u53D1" class="headerlink" title="高级开发"></a>高级开发</h1><h1 id="u6280_u672F_u74F6_u9876_u9650_u5236"><a href="#u6280_u672F_u74F6_u9876_u9650_u5236" class="headerlink" title="技术瓶顶限制"></a>技术瓶顶限制</h1><h1 id="u5BF9iOS_u5F00_u53D1_u7684_u770B_u6CD5"><a href="#u5BF9iOS_u5F00_u53D1_u7684_u770B_u6CD5" class="headerlink" title="对iOS开发的看法"></a>对iOS开发的看法</h1><h1 id="u5BF9_u8F6F_u4EF6_u5F00_u53D1_u5DE5_u7A0B_u5E08_u7684_u7406_u89E3"><a href="#u5BF9_u8F6F_u4EF6_u5F00_u53D1_u5DE5_u7A0B_u5E08_u7684_u7406_u89E3" class="headerlink" title="对软件开发工程师的理解"></a>对软件开发工程师的理解</h1><h1 id="u7F16_u7A0B_u601D_u60F3"><a href="#u7F16_u7A0B_u601D_u60F3" class="headerlink" title="编程思想"></a>编程思想</h1><h1 id="u7ED3_u8BED"><a href="#u7ED3_u8BED" class="headerlink" title="结语"></a>结语</h1>  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/iOS开发/">iOS开发</a>
+  </div>
+
+
+
+
+<div class="article-share" id="share">
+
+  
+<div class="jiathis_style">
+    <span class="jiathis_txt">分享到：</span>
+    <a class="jiathis_button_tsina">新浪微博</a>
+    <a class="jiathis_button_weixin">微信</a>
+    <a class="jiathis_button_twitter">Twitter</a>
+    <a class="jiathis_button_evernote">EverNote</a>
+    <a href="http://www.jiathis.com/share?uid=1501277" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+</div>
+<script type="text/javascript" >
+    var jiathis_config={
+    data_track_clickback:true,
+    sm:"copy,renren,cqq",
+    pic:"",
+    summary:"",
+    
+  </script> 
+<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=
+" charset="utf-8"></script>      
+
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/10/17/H5入门之路/"  title="H5入门之路">
+ <strong>NEXT:</strong><br/> 
+ <span>H5入门之路
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u524D_u8A00"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u8FC7_u7A0B_u6982_u8FF0"><span class="toc-number">2.</span> <span class="toc-text">过程概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#objC"><span class="toc-number">2.1.</span> <span class="toc-text">objC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BED_u6CD5_u5165_u95E8"><span class="toc-number">2.2.</span> <span class="toc-text">语法入门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UI_u5165_u95E8"><span class="toc-number">2.3.</span> <span class="toc-text">UI入门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7B2C_u4E00_u4EFD_u5DE5_u4F5C"><span class="toc-number">2.4.</span> <span class="toc-text">第一份工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7B2C_u4E8C_u4EFD_u5DE5_u4F5C"><span class="toc-number">2.5.</span> <span class="toc-text">第二份工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7B2C_u4E09_u4EFD_u5DE5_u4F5C_uFF08_u5F53_u524D_uFF09"><span class="toc-number">2.6.</span> <span class="toc-text">第三份工作（当前）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u5404_u6A21_u5757_u6280_u672F"><span class="toc-number">3.</span> <span class="toc-text">各模块技术</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u5404_u9879_u76EE_u56DE_u987E"><span class="toc-number">4.</span> <span class="toc-text">各项目回顾</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u4F18_u79C0_u7B2C_u4E09_u65B9SDK_u539F_u7406_u63A2_u7A76"><span class="toc-number">5.</span> <span class="toc-text">优秀第三方SDK原理探究</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u9AD8_u7EA7_u5F00_u53D1"><span class="toc-number">6.</span> <span class="toc-text">高级开发</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u6280_u672F_u74F6_u9876_u9650_u5236"><span class="toc-number">7.</span> <span class="toc-text">技术瓶顶限制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u5BF9iOS_u5F00_u53D1_u7684_u770B_u6CD5"><span class="toc-number">8.</span> <span class="toc-text">对iOS开发的看法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u5BF9_u8F6F_u4EF6_u5F00_u53D1_u5DE5_u7A0B_u5E08_u7684_u7406_u89E3"><span class="toc-number">9.</span> <span class="toc-text">对软件开发工程师的理解</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u7F16_u7A0B_u601D_u60F3"><span class="toc-number">10.</span> <span class="toc-text">编程思想</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u7ED3_u8BED"><span class="toc-number">11.</span> <span class="toc-text">结语</span></a></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/C语言/" title="C语言">C语言<sup>1</sup></a></li>
+		
+			<li><a href="/tags/HTML开发/" title="HTML开发">HTML开发<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>4</sup></a></li>
+		
+			<li><a href="/tags/iOS开发/" title="iOS开发">iOS开发<sup>4</sup></a></li>
+		
+			<li><a href="/tags/学习资源/" title="学习资源">学习资源<sup>1</sup></a></li>
+		
+			<li><a href="/tags/数据结构/" title="数据结构">数据结构<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/5834791430" target="_blank" name="weibo"></a>
+		
+		
+		
+		<a href="https://github.com/DaBinGe" target="_blank" name="github"></a>
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/zhyu/yaht" target="_blank" title="YAHT">YAHT</a> © 2016 
+		
+		<a href="http://yoursite.com" target="_blank" title="大彬">大彬</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.navbar').click(function(){
+      $('header nav').toggleClass('shownav');
+    });
+    var myWidth = 0;
+    function getSize(){
+      if( typeof( window.innerWidth ) == 'number' ) {
+        myWidth = window.innerWidth;
+      } else if( document.documentElement && document.documentElement.clientWidth) {
+        myWidth = document.documentElement.clientWidth;
+      };
+    };
+    var m = $('#main'),
+    a = $('#asidepart'),
+    c = $('.closeaside'),
+    o = $('.openaside');
+    $(window).resize(function(){
+      getSize();
+      if (myWidth >= 1024) {
+        $('header nav').removeClass('shownav');
+      }else
+      {
+        m.removeClass('moveMain');
+        a.css('display', 'block').removeClass('fadeOut');
+        o.css('display', 'none');
+        
+            $('#toc.toc-aside').css('display', 'none');
+          
+      }
+    });
+    c.click(function(){
+      a.addClass('fadeOut').css('display', 'none');
+      o.css('display', 'block').addClass('fadeIn');
+      m.addClass('moveMain');
+    });
+    o.click(function(){
+      o.css('display', 'none').removeClass('beforeFadeIn');
+      a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+      m.removeClass('moveMain');
+    });
+    $(window).scroll(function(){
+      o.css("top",Math.max(80,260-$(this).scrollTop()));
+    });
+  });
+</script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+      if(ai.length>0){
+        ai.wrap('<div class="video-container" />');
+      };
+      if(ae.length>0){
+        ae.wrap('<div class="video-container" />');
+      };
+      if(ah.length==0){
+        t.css('display','none');
+      }else{
+        c.click(function(){
+          ta.css('display', 'block').addClass('fadeIn');
+        });
+        o.click(function(){
+          ta.css('display', 'none');
+        });
+        $(window).scroll(function(){
+          ta.css("top",Math.max(140,320-$(this).scrollTop()));
+        });
+      };
+    });
+  </script>
+
+
+
+  
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"null"};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+    </script>
+  
+  
+
+
+
+
+
+
+  <div id="back-to-top">
+    <a title="返回顶部"><img src="/img/scrollup.png"/></a>
+  </div>
+  <script src="/js/back_to_top.js"></script>
+
+
+
+  </body>
+</html>
+
