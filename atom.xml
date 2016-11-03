@@ -4,7 +4,7 @@
   <subtitle><![CDATA[做什么都一样，用心去做都可以做好。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-31T10:14:51.000Z</updated>
+  <updated>2016-11-03T10:24:24.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2016/10/31/IOS%E5%BC%80%E5%8F%912%E5%B9%B4%E5%8D%8A%E7%BB%8F%E9%AA%8C%E5%9B%9E%E9%A1%BE/"/>
     <id>http://yoursite.com/2016/10/31/IOS开发2年半经验回顾/</id>
     <published>2016-10-31T09:37:42.000Z</published>
-    <updated>2016-10-31T10:14:51.000Z</updated>
+    <updated>2016-11-03T10:24:24.000Z</updated>
     <content type="html"><![CDATA[<h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>本文主要是为进阶新层次而总结开发30个月以来的学习成果。为尽可能多地覆盖广度和深度，分别从几个大方面描述相关内容。</p>
 <h1 id="u8FC7_u7A0B_u6982_u8FF0"><a href="#u8FC7_u7A0B_u6982_u8FF0" class="headerlink" title="过程概述"></a>过程概述</h1><h2 id="objC"><a href="#objC" class="headerlink" title="objC"></a>objC</h2><p>iOS开发所用的语言Objective-C是新兴的一门开发语言，大学并没有开设相关课程。但是，oc是从c语言衍生过来了，有很多c语言的特征，也有高级语言和面向对象语言的特征，电子和计算机专业相关的人学起来都比较容易上手。</p>
 <h2 id="u8BED_u6CD5_u5165_u95E8"><a href="#u8BED_u6CD5_u5165_u95E8" class="headerlink" title="语法入门"></a>语法入门</h2><p>小编是从0开始学iOS开发的，2014年4月13日开始写下第一行iOS开发的代码。那时还没毕业，就出来培训iOS开发，觉得系统地学下基础来入门会更好，避免留下坏的编程习惯。<br>语法学习。各门语言都一样，一开始必须学习语法知识，才能看得懂、写得出代码。oc的语法，主要是函数调用和消息机制和c语言有差别，数据处理方面基本没变。<br>编程最难最痛苦的莫过于处理数据了。学习的数据类型及其转换、赋值、对比判断，选择分支和循环等等，都是用来处理数据的。<br>函数的格式换了一种，让函数更长更易读。<br>使用开发工具的能力一直在提升，那时只会用Xcode，Mac OS的基本使用也摸索得差不多，安装和破解个软件没什么压力。</p>
@@ -42,9 +42,33 @@
 <li>第三方开放平台，腾讯（登录分享）、微信（登录分享支付）、支付宝、新浪微博（登录分享）、友盟（统计、客服留言板）、个推、高德地图、“科大讯飞、环信（差点引入）”</li>
 <li>性能，后台模式（定位、语音）、数据库快速写入、多个异步线程网络请求、UI渲染、内存泄漏优化等</li>
 <li>音视频，录制、本地及网络播放、上传、下载、视频转码、视频缩略图等</li>
-<li>数据库，CoreData、FMDB<br>阅读了千千万万的文档之后，做好以上功能已经没有压力了。但是由于APP的用户量不高，更精细的功能还有待进一步提高。</li>
+<li>数据库，CoreData、FMDB    </li>
 </ul>
-<h1 id="u5404_u6A21_u5757_u6280_u672F"><a href="#u5404_u6A21_u5757_u6280_u672F" class="headerlink" title="各模块技术"></a>各模块技术</h1><h1 id="u5404_u9879_u76EE_u56DE_u987E"><a href="#u5404_u9879_u76EE_u56DE_u987E" class="headerlink" title="各项目回顾"></a>各项目回顾</h1><h1 id="u4F18_u79C0_u7B2C_u4E09_u65B9SDK_u539F_u7406_u63A2_u7A76"><a href="#u4F18_u79C0_u7B2C_u4E09_u65B9SDK_u539F_u7406_u63A2_u7A76" class="headerlink" title="优秀第三方SDK原理探究"></a>优秀第三方SDK原理探究</h1><h1 id="u9AD8_u7EA7_u5F00_u53D1"><a href="#u9AD8_u7EA7_u5F00_u53D1" class="headerlink" title="高级开发"></a>高级开发</h1><h1 id="u6280_u672F_u74F6_u9876_u9650_u5236"><a href="#u6280_u672F_u74F6_u9876_u9650_u5236" class="headerlink" title="技术瓶顶限制"></a>技术瓶顶限制</h1><h1 id="u5BF9iOS_u5F00_u53D1_u7684_u770B_u6CD5"><a href="#u5BF9iOS_u5F00_u53D1_u7684_u770B_u6CD5" class="headerlink" title="对iOS开发的看法"></a>对iOS开发的看法</h1><h1 id="u5BF9_u8F6F_u4EF6_u5F00_u53D1_u5DE5_u7A0B_u5E08_u7684_u7406_u89E3"><a href="#u5BF9_u8F6F_u4EF6_u5F00_u53D1_u5DE5_u7A0B_u5E08_u7684_u7406_u89E3" class="headerlink" title="对软件开发工程师的理解"></a>对软件开发工程师的理解</h1><h1 id="u7F16_u7A0B_u601D_u60F3"><a href="#u7F16_u7A0B_u601D_u60F3" class="headerlink" title="编程思想"></a>编程思想</h1><h1 id="u7ED3_u8BED"><a href="#u7ED3_u8BED" class="headerlink" title="结语"></a>结语</h1>]]></content>
+<p>阅读了千千万万的文档之后，做好以上功能已经没有压力了。但是由于APP的用户量不高，更精细的功能还有待进一步提高。</p>
+<h1 id="u5404_u6A21_u5757_u6280_u672F"><a href="#u5404_u6A21_u5757_u6280_u672F" class="headerlink" title="各模块技术"></a>各模块技术</h1><h2 id="u8BED_u6CD5_u57FA_u7840"><a href="#u8BED_u6CD5_u57FA_u7840" class="headerlink" title="语法基础"></a>语法基础</h2><p>主要学习了基本数据类型和id数据类型的基本用法和函数、类的语法等，包括运算、对比、转换和一些逻辑处理等，多是用于业务数据处理方面，属于很形象的一个就是MVC的model。这一块没有界面效果，都是在控制台进行的。</p>
+<h2 id="UI_u57FA_u7840"><a href="#UI_u57FA_u7840" class="headerlink" title="UI基础"></a>UI基础</h2><p>学习了UIView及其子类的用法，手势交互及手机系统响应者链、APP结构等。几乎每一句都有相应的效果对应，学起来没那么抽象，也快很多。这部分就属于MVC的view和controller了。</p>
+<h2 id="u5E94_u7528_u5F00_u53D1"><a href="#u5E94_u7528_u5F00_u53D1" class="headerlink" title="应用开发"></a>应用开发</h2><p>主要学习手机系统和app工作原理，应用组成，各界面切换等。涉及应用层的显示、交互、网络和更新等。这个模块和UI基础类似，却更深入学习了APP的架构和原理。</p>
+<h2 id="u5C0F_u6570_u636E_u5B58_u50A8"><a href="#u5C0F_u6570_u636E_u5B58_u50A8" class="headerlink" title="小数据存储"></a>小数据存储</h2><p>有归解档 archive、属性列表 plist、用户默认设置 NSUserDefault、文件管理 NSFileManager等。<br>它们的读写的接口都比较简单，按需选择来用就可以。</p>
+<h2 id="u5927_u6570_u636E_u5B58_u50A8"><a href="#u5927_u6570_u636E_u5B58_u50A8" class="headerlink" title="大数据存储"></a>大数据存储</h2><p>主要是数据库，包括原生sqlite，FMDB，CoreData,Realm等。<br>sqlite还是比较麻烦的，难度也大，毕竟是c代码的操作；CoreData有图形设置界面，接口也不多，即使是XMPP里的CoreData也是，但是难度也大；FMDB和Realm都是sqlite封装出来的，虽然用着会方便些，但是升级问题、安全问题还是得考虑进去，看着文档写很快就会了。<br>然后就是数据库的通用难点了。表的改变、关联，数据迁移升级等。</p>
+<h2 id="u6570_u636E_u5904_u7406"><a href="#u6570_u636E_u5904_u7406" class="headerlink" title="数据处理"></a>数据处理</h2><p>主要是数据解析、组装及各种类型间的转换。<br>解析包括XML、JSON、Node节点、多层嵌套结果获取等。组装有集合和字符串处理等。转换一般是字典模型转换、基本数据类型、id类型、CF框架类型、xml、node节点、Coredata类型和自定义id类型等相互间的转换。</p>
+<h2 id="u7F51_u7EDC"><a href="#u7F51_u7EDC" class="headerlink" title="网络"></a>网络</h2><p>处理封装接口就是实现加载动画和回调提示了。基本是都是使用AFNetworking的接口，再封装一层接口来用，主要是短连接的Post请求和多文件上传。即使是断点续传，也都被封装好了的。当然，它的实现原理还是知道的。简单地说就是，开个异步线程，创建一个请求，把组装好参数和地址，发起请求，等待并处理结果返回就可以。</p>
+<h2 id="u591A_u5A92_u4F53"><a href="#u591A_u5A92_u4F53" class="headerlink" title="多媒体"></a>多媒体</h2><h3 id="u56FE_u7247"><a href="#u56FE_u7247" class="headerlink" title="图片"></a>图片</h3><p>从上传到浏览的处理：获取（单选多选相册、拍照）、多图上传、小图浏览及加载指示、大图放大。下载显示包含异步下载和文件处理等，这些已被SDWebImage集成好。<br>其他处理包括截图、裁剪、玻化、水印、压缩等。</p>
+<h3 id="u97F3_u9891"><a href="#u97F3_u9891" class="headerlink" title="音频"></a>音频</h3><p>录音、时长、本地网络播放、上传、下载、权限、后台模式、音频冲突等。本地播放还分文件播放和文字播放的。如果感觉系统的语音不好听，可以引入科大讯飞语音。</p>
+<h3 id="u89C6_u9891"><a href="#u89C6_u9891" class="headerlink" title="视频"></a>视频</h3><p>视频比音频文件大，多了图像流，所以上传、下载需要压缩、分段或者续传之类的，格式上要和安卓兼容，还要视频转码，视频缩略图有接口直接可以获取到。其他很多和音频类似。</p>
+<h2 id="u6027_u80FD_u4F18_u5316"><a href="#u6027_u80FD_u4F18_u5316" class="headerlink" title="性能优化"></a>性能优化</h2><p>这个模块要求有很好的技术，而且贯穿这个开发生涯。<br>小到编码规范，大到精妙算法，很多都和性能有关。网上已有不少博客描述了性能优化的例子，读者请自行查看，下面说说小编性能优化经历：</p>
+<h3 id="u5185_u5B58_u7BA1_u7406"><a href="#u5185_u5B58_u7BA1_u7406" class="headerlink" title="内存管理"></a>内存管理</h3><p>MRC的内存管理在此就不多说了，下面列出几个ARC下的内存管理：    </p>
+<ul>
+<li>c或者底层C写的框架,CoreFoundation,CoreGraphics等,所生成的对象</li>
+<li>循环引用，对象件引用，代码块相关引用</li>
+<li>循环生成多个对象时，用autoreleasepool及时释放内存</li>
+<li>相册、图片处理，读写时防止出现内存峰值</li>
+<li>@property相关的设定</li>
+<li>dealloc释放相关(释放引用或者定时器、移除侦听)    </li>
+</ul>
+<h3 id="UI_u6E32_u67D3"><a href="#UI_u6E32_u67D3" class="headerlink" title="UI渲染"></a>UI渲染</h3><p>主要是控制圆角、边框、透明度和控件重叠等。显然，频繁重绘肯定影响性能了，比如地图功能里不断移除和添加标注或覆盖物。    </p>
+<h3 id="u964D_u4F4ECPU_u6D88_u8017"><a href="#u964D_u4F4ECPU_u6D88_u8017" class="headerlink" title="降低CPU消耗"></a>降低CPU消耗</h3><p>在cell重用的时候，尽量不重复生成对象，尤其是NSDateFormatter和NSNumberFormatter。异步加载图片的时候，多个线程也会加大CPU负担。</p>
+<h3 id="u4EE3_u7801_u91CD_u6784"><a href="#u4EE3_u7801_u91CD_u6784" class="headerlink" title="代码重构"></a>代码重构</h3><p>经常因为赶工期，前面都是实现了功能，后来有时间才会重构代码，优化一些算法的实现，这部分往往是处理循环相关的操作。</p>
+<h1 id="u5404_u9879_u76EE_u56DE_u987E"><a href="#u5404_u9879_u76EE_u56DE_u987E" class="headerlink" title="各项目回顾"></a>各项目回顾</h1><h1 id="u4F18_u79C0_u7B2C_u4E09_u65B9SDK_u539F_u7406_u63A2_u7A76"><a href="#u4F18_u79C0_u7B2C_u4E09_u65B9SDK_u539F_u7406_u63A2_u7A76" class="headerlink" title="优秀第三方SDK原理探究"></a>优秀第三方SDK原理探究</h1><h1 id="u9AD8_u7EA7_u5F00_u53D1"><a href="#u9AD8_u7EA7_u5F00_u53D1" class="headerlink" title="高级开发"></a>高级开发</h1><h1 id="u6280_u672F_u74F6_u9876_u9650_u5236"><a href="#u6280_u672F_u74F6_u9876_u9650_u5236" class="headerlink" title="技术瓶顶限制"></a>技术瓶顶限制</h1><h1 id="u5BF9iOS_u5F00_u53D1_u7684_u770B_u6CD5"><a href="#u5BF9iOS_u5F00_u53D1_u7684_u770B_u6CD5" class="headerlink" title="对iOS开发的看法"></a>对iOS开发的看法</h1><h1 id="u5BF9_u8F6F_u4EF6_u5F00_u53D1_u5DE5_u7A0B_u5E08_u7684_u7406_u89E3"><a href="#u5BF9_u8F6F_u4EF6_u5F00_u53D1_u5DE5_u7A0B_u5E08_u7684_u7406_u89E3" class="headerlink" title="对软件开发工程师的理解"></a>对软件开发工程师的理解</h1><h1 id="u7F16_u7A0B_u601D_u60F3"><a href="#u7F16_u7A0B_u601D_u60F3" class="headerlink" title="编程思想"></a>编程思想</h1><h1 id="u7ED3_u8BED"><a href="#u7ED3_u8BED" class="headerlink" title="结语"></a>结语</h1>]]></content>
     <summary type="html">
     <![CDATA[<h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>本文主要是为进阶新层次而总结开发30个月以来的学习成果。为尽可能多地覆盖广度和深度，分别从几个大方面描述]]>
     </summary>
